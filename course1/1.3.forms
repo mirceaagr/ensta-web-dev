@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forms</title>
+</head>
+<body>
+	<form action="myaction.php" method="GET">
+		<!-- talk about request types -->
+		<label>Your Name:
+			<input type="text" name="name">
+		</label>
+        <br>
+		<label>Your Password:
+			<input type="password" name="password">
+		</label>
+        <br>
+		<label for="textareaID">Your History:</label>
+		<br>
+		<textarea id="textareaID" name="history" rows="4" cols="80">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</textarea>
+
+		<fieldset>
+			<legend>Hobbies</legend>
+			Programming <input type="checkbox" name="cbProgramming" value="Programming">
+			Web <input type="checkbox" name="cbWeb" value="Web">
+
+			<legend>Do you like fitness?</legend>
+			yes <input type="radio" name="fitness" value="yes" checked>
+			no <input type="radio" name="fitness" value="no">
+		      <br>
+			<input type="hidden" name="browser" name="browser">
+            <br>
+			<input type="file" name="fileUpload">
+
+			<legend>Favourite Hobbies</legend>
+			<select name="favHobbies">
+				<option value="">--</option>
+				<optgroup label="Indoors">
+					<option value="Programing">Programming</option>
+					<option value="Drawing">Drawing</option>
+				</optgroup>
+				<optgroup label="Outdoors">
+					<option value= "Footbal">Footbal</option>
+					<option value= "Hockey">Hockey</option>
+					<option value= "Rugby">Rugby</option>
+				</optgroup>	
+				
+			</select>
+
+		</fieldset>
+
+		<input type="submit" name="submit" value="Submit">
+		<input type="reset" value="Reset">
+		
+	</form>
+
+</body>
+</html>

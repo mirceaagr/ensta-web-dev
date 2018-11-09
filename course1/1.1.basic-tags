@@ -1,0 +1,121 @@
+
+<!-- Declaration of what type of HTML we are using -->
+<!DOCTYPE html>
+<!-- hypertext markup language -->
+<!-- http uniform source locator -->
+<!-- domain name -->
+<!-- path -->
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<!-- <meta http-equiv="refresh" content="3; url=redirect.html"> -->
+	<meta name="description" content="some description"/>
+	<meta name="keywords" content="course, html">
+	<meta name="robots" content="index, follow ">
+	<!-- / archive / noarchive / nofollow -->
+
+	<!-- <script type="text/javascript" src="randomscript.js"></script> -->
+	<base href="http://localhost/">
+	<!-- <link rel="stylesheet" type="text/css" href="somestylesheet.css"> -->
+	<link rel="icon" href="">
+
+	<title>Course 1</title>
+</head>
+<body onload="console.log('body loaded')">
+	<div id="wrapper">
+		
+		<h1>H1 tag</h1>
+		<h2>H2 tag</h2>
+		<h3>H3 tag</h3>
+		<h4>H4 tag</h4>
+		<h5>H5 tag</h5>
+		<h6>H6 tag</h6>
+		
+		<div class="divclass">divclass</div>
+		<div class="divclass">divclass</div>
+		<div class="divclass">divclass</div>
+		<div class="divclass">divclass</div>
+		
+		<div id="divid">divID</div>
+
+
+		<hr>
+
+		<blockquote cite="http://somesite.com"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</blockquote>
+
+		<q cite="http://somesite.com"> Same as blockquote but cites</q>
+
+		<pre>
+			<code>
+				<!-- preseverse whitespace and code will not execute code-->
+
+			</code>
+		</pre>
+
+
+		<small>Small</small>
+		<ins>Insert</ins>
+		<del>Delete</del>
+		<samp>Sample</samp>
+
+
+		Abbreviation <abbr title="abbreviation">ABBR.</abbr>
+		<dfn>Definition:</dfn>
+		<dfn title="blablabalba">dasdasdada</dfn>
+
+		<kbd>Enter something</kbd>
+		<!-- keyboard input -->
+
+		<!-- character entities -->
+		&cent;
+		&pound;
+		&copy;
+		&frac4;
+		&frac32;
+
+		4<sup>2</sup><br>
+		CO<sub>2</sub><br>
+		<bdo dir="rtl">arabic text</bdo>
+		<ruby>blabla <rt>blabla</rt></ruby>
+		<!-- pronunciation -->
+
+		<img src="someimage.jpg" alt="test image">
+
+		<!-- hyperlinks -->
+		<a href="http://google.com"> Google </a>
+		<a href="#">Google</a>
+		<a href="http://google.com" target="_blank"></a>
+		<a href="mailto:mail@mail.com"></a>
+		<!-- hover / active / visited -->
+		<a href="http://google.com">
+			<img src="someimage.jpg">
+		</a>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+
+		<object>
+			<!-- embeds music/videos/imagemaps -->
+		</object>
+
+		<iframe width="560" src="https://google.com"></iframe>
+
+
+
+	</div>
+
+	<noscript>It's 2018 please enable JS on your machine</noscript>
+</body>
+</html>

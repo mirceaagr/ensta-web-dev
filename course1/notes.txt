@@ -1,0 +1,153 @@
+# About the course:
+- each course 1h/1.5h basic syntax, 1h course project, the rest for explications
+- mostly practical -> no ppt slides, based on live coding
+- classes are linked, don't skip classes
+- each of you will have it's own environment on AWS prepared for that session
+- the code written during the course will be available to you aftr the course ends
+- strongly encourage you to join the Slack channel. 
+- evaluation is done in the last session. You will have to build in class a project on a given theme with the technologies learned in this course.
+
+# About AWS
+- AWS -> Amazon Web Services
+- We will use Cloud9 Service for live coding sessions
+- To access our group: https://aws.amazon.com/ => connect to console => use ID: 040704903439
+- Use your name as username and the given password(enstaweb) -> on the first login you will have to change your password
+
+# About Web Development
+- front end : html, css, javascript
+- back end: php, java, python, c# etc. 
+- full stack -> ninjas..
+
+# About HTML
+
+- Valid html formats .html / .htm (oldschool but still used)
+- HTML5 only -> don't bother to look into older versions
+- you will not learn html in 5 minutes/1 hour/1 session -> learn by practice ... so practice home
+- hypertext markup language -> used for creating html documents -> lacks logic therefor is not a programming language
+- building blocks of the web -> it might be more important than the programming language powering the site
+- it's hard to get jobs with only html/css but it's still possible to make money with it -> example: theme development, pure front end guy
+- to write it you need a text editor(sublime, atom, visual studio code, notepad++, textmate) 
+- to display it you need a web browser (hopefully not IE.. IE it's bad ... mkaay!?)
+- you don't need a server but to display it on the web you need a http server
+- index.html -> root of the site -> web servers can be configured to serve different names of the root of the website but all will serve by default index.html
+ ex. http://my-site.fr/ -> will access index.html in the webroot of my-site.fr / to access a different page http://my-site.fr/contact.html will access contact.html in the webroot
+
+# Course 1 Notes
+
+with what you learn in this first course you can create a STATIC website.. an ugly one.. but nevertheless a usable one. HTML without CSS it's plain ugly
+
+## Html tags: -> building blocks of the web page
+ Tags are element names surrounded by angle brackets; normally come in pairs(start tag and end tag)
+    
+    <tagname>content</tagname>
+    ex. <h1>About</h1>
+    
+    !!!! don't forget to close tags !!!!
+
+    we can have self closing tags: <br /> -> remnant of XHTML -> older version of HTML but still accepted
+    <br> -> this will work in HTML5
+    
+## Html doc structure:
+
+  - think of a html page as a human being.. head info is private, body is the appearance, CSS is the clothes and makeup
+ 
+ <!DOCTYPE html> -> tells the version of HTML -> this one tells us we are using HTML5 
+ <html>
+    <head>
+        information about the page: description, keywords, title etc
+    </head>
+    <body>
+        actual page
+    <body>
+ </html>
+
+## Ctrl + U will show the page source in browser, F12 will open the console
+ 
+## Type of HTML tags:
+    - inline -> do not start a new line; take only the necessary width (<span> <img> <a>)
+    - block -> start a new line; take full width available (<div> <h1> - <h6> <p> <form>)
+
+## Main bullets to take from this course:
+p -> with strong, b, em
+divs
+semantic tags
+links
+lists
+tables -> never use tables for layouts just for tabular data
+forms
+
+## All browsers have their own default styling
+
+## Tag Attributes:
+    - all tags can have attributes
+    - they provide information about an element
+    - placed in the FIRST tag
+    - key/val pair (id="myId")
+    - you can use single or double quotes -> doesn't matter
+ 
+    <tagname attributename="attributevalue"> content </tagname>
+    ex. <img src="img.jpg" title="self portrait" alt="me in the picture" />
+
+ HTML5 Semantic Tags
+  - clearly describes it's meaning/role to the browser and the developer
+  - they are:
+  <header>, <footer>, <aside>, <main>, <article>, <nav>, <section>, <details>
+  
+  LEARN THEM and most important USE THEM
+  
+  ex.:
+    <main>
+        <header>
+        </header>
+        
+        <section>
+            <article>
+                <details>
+                </details>
+            </article>
+        </section>
+            
+        <aside>
+            <nav>
+            </nav>
+        </aside>
+        
+        <footer>
+        </footer>
+    </main>
+
+## Forms
+-> starts and ends with <form> tag
+-> neeed to specify the action of the form
+-> you can have any type of markup inside of a form, tables, divs, semantic tags etc
+-> in html we can just show the form but we do not add any functionality
+-> `name` attribute really important if you want the form to do something
+-> we can have basic NAIVE validation inside a browser -> to be avoided.. or at least don't rely on it
+-> we can have multiple input types: text, email, phone, radio, checkbox, submit, textarea, selects
+-> labels can be linked using `for` tag so we can activate the input by clicking on the label
+
+## Basic CSS
+## How to add CSS
+- inline -> directly in html -> not recommended for the most part (there will be occasions when it's ok-> like using js frameworks)
+- internal -> using <style> tags -> you can add directly in the page (also not really recommended)
+- external -> linking external .css file -> all the cool kids use it
+  * presentation and styling should be always a separate part of the app
+
+##CSS selectors
+
+selector    property    value   
+
+   a     {  background: red;  }
+ 
+ Usefull Links:
+ 
+ The goto page for HTML learning
+ [https://www.w3schools.com/html/] 
+ 
+ How to validate HTML
+ [https://validator.w3.org/]
+
+
+
+ 
+ 
