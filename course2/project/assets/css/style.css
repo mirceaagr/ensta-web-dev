@@ -1,7 +1,12 @@
+
+/* we used a fixed top navbar -> has a position fixed, therefor the body will come under the navbar
+ 	to fix this we add a margin top of 60px to the body
+ */
 body{
 	margin-top:60px;
 }
 
+/* align the sidebar content to the center */
 #sidebar-content{
 	text-align:center;
 	width:250px;
@@ -9,21 +14,25 @@ body{
 	padding:20px 0;
 }
 
+/* add padding and full width to the .image class in the sidebar */
 #sidebar-content .image{
     width: 100%;
     padding: 10px;
     margin: 10px 0 10px 0;
 }
 
+/* target the ul with the class list-group(bootstrap class) inside the element with the id `sidebar-content` */
 #sidebar-content ul.list-group{
 	text-align:left;
 }
 
+/* target li with class `list-group-item` inside ul with class `list-group` inside div with id `sidebar-content` */
 #sidebar-content ul.list-group li.list-group-item{
 	border: none;
 	padding:10px;
 }
 
+/* target the h1's inside div with id of #sidebar-content */
 #sidebar-content h1{
 	font-size:2em;
 	color:orange;
@@ -31,6 +40,7 @@ body{
 	text-shadow: 1px 1px 1px white
 }
 
+/* target element with id of `person-title` */
 #person-title{
 	background:#000;
 	padding:4px;
@@ -44,30 +54,38 @@ body{
 	margin-top:20px;
 }
 
+/* Make the carousel to have a height of 300px */
 .carousel-inner{
 	height:300px;
 }
 
+/* Target the img children of children .item inside elements with class of carousel-inner */
 .carousel-inner > .item > img {
 	width:100%;
 }
 
 /* Sections */
 
+/* we scroll to each section, to be able to see the tile of the section we add a top padding */
 section{
 	padding-top:30px;
 }
 
+/* target first letter of h2's inside elements of type section */
 section h2:first-letter{
 	color:orange;
 }
 
+/* overwrite bootstrap class of thumbnail -> NEVER modify bootstrap classes directly. 
+In our case we cannot do that anyway because we use bootstrap from CDN
+*/
 .thumbnail{
 	min-height:480px;
 }
 
+/* target element with id of `about-me` */
 #about-me{
-	opacity:0.7;
+	opacity:0.7; /*lowers opacity to 70% . Opacity is between 0 and 1*/ 
 	background-image: url('https://picsum.photos/g/300/200/?img=1234');	
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -75,6 +93,7 @@ section h2:first-letter{
 	padding:20px;    
 }
 
+/* we can target multiple properties at once so we avoid rewriting the code */
 #about-me h2, #about-me p{
 	color:black;
 	opacity:1;
@@ -82,11 +101,12 @@ section h2:first-letter{
 
 .item-service{
 	background:#f3f3f3;
-	border-radius:15px;
+	border-radius:15px; /*makes the borders rounder*/
 	text-align:center;
 	padding:15px;
 }
 
+/* target icons inside elements with class .item-service */
 .item-service i {
 	width:150px;
 	height:150px;
@@ -95,35 +115,42 @@ section h2:first-letter{
     border-radius: 100%;
 }
 
+/* target elements with class .item-service and p with class text-muted inside .item-service 
+WHEN we hover the mouse over elements with class `item-service` */
 .item-service:hover, .item-service:hover p.text-muted{
 	background:orange;
 	color:white;
 }
 
+/* tagets icons inside elements with class .item-service WHEN we hover over elements with this class */
 .item-service:hover i {
 	color:orange;
 }
 
+/* Overwrite bootstrap class .progress */
 .progress{
 	margin-bottom:5px;
 }
 
 /* timeline */
 ul.timeline{
-	list-style-type:none;
+	list-style-type:none; /*we reset the list styling*/
 }
 
+/* target li's inside ul with class of timeline */
 ul.timeline li{
     border-left: 2px solid orange;
     padding-left: 20px;
     margin-top:-20px;
 }
 
+/* target FIRST li inside ul with class of `timeline` */
 ul.timeline li:first-child{
 	border-left:none;
 	margin-bottom:35px;
 }
 
+/* target the content IMEDIATELY before items with class `line-title` */
 .line-title::before{
 	content:"\2192";
 	font-weight: 800;
@@ -139,9 +166,9 @@ ul.timeline li:first-child{
     border-radius: 50px;
     height: 50px;
     background: orange;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /*container will flex*/
+    align-items: center;/*flexing items inside will be pulled to the center*/
+    justify-content: center;/*content will try to stretch to the margins*/
     color:white;
 }
 
