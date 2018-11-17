@@ -15,10 +15,11 @@
 		<link rel="stylesheet" href="./assets/css/style.css" />
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     </head>
+    <!-- The scroll spy with show the current position in the top navbar .The href have to be the same as the ones in sections -->
     <body data-spy="scroll" data-target="#main-navbar">
     	<div class="container-fluid">
 			<div class="row">
-				
+				<!-- Navbar snippet from bootstrap-->
 				<nav class="navbar navbar-default navbar-fixed-top" id="main-navbar">
 				  <div class="container">
 				    <!-- Brand and toggle get grouped for better mobile display -->
@@ -36,7 +37,7 @@
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      <ul class="nav navbar-nav">
 				  		<li class="active"><a href="#about-me" ><i class="fa fa-home"></i></a></li>
-				  		<li><a href="#services">Services</a></li>
+				  		<li><a href="#services">Services</a></li> <!-- id's match id's in sections -->
 				  		<li><a href="#skills">Skills</a></li>
 				        <li><a href="#resume">Resume</a></li>
 				        <li><a href="#portfolio">Portfolio</a></li>
@@ -44,10 +45,11 @@
 				      </ul>
 
 				       <ul class="nav navbar-nav navbar-right">
-				        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+				        <li><a href=""><i class="fab fa-facebook"></i></a></li> <!-- fa/fab/fas are fontawesome classes -->
 				        <li><a href=""><i class="fab fa-twitter"></i></a></li>
 				        <li><a href=""><i class="fab fa-snapchat"></i></a></li>
-				        <li><a class="btn btn-warning btn-hire">Hire me <i class="fa fa-paper-plane"></i></a></li>				       
+				        <!-- Pressing this button will open the form on the bottom of the page -->
+				        <li><a role="button" data-toggle="modal" data-target="#hireMeModal">Hire me <i class="fa fa-paper-plane"></i></a></li>				       
 				      </ul>
 				    </div><!-- /.navbar-collapse -->
 				  </div><!-- /.container-fluid -->
@@ -437,6 +439,7 @@
 		</div>
 
 			<!-- Modal -->
+			<!-- The content will show when the modal-toggle will be triggered via click -->
 		<div class="modal fade" id="hireMeModal" tabindex="-1" role="dialog" aria-labelledby="hireMeModalLabel">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
