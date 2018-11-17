@@ -1,0 +1,376 @@
+## What is CSS
+CSS is a language that describes the style of an HTML document.
+CSS describes how HTML elements should be displayed.
+CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes. 
+
+Bullet points:
+- stands from Cascade Style Sheet
+- everyone's css is different
+- more of an art -> this is just a crash course
+- NOT a programming language-> styling language
+- most used with HTML -> doesn't have any logic but you can extend CSS with SASS/LeSS etc
+- What you need: text-editor + browser
+
+## What problem CSS solves
+HTML describes the content of the page. There are tags in HTML for fonts and widths and so on, but it would be painful to rewrite everything in everypage
+CSS Saves a Lot of Work!
+With an external stylesheet file, you can change the look of an entire website by changing just one file!
+
+## How to add CSS
+- inline -> directly in html -> not recommended for the most part (there will be occasions when it's ok-> like using js frameworks)
+- internal -> using <style> tags -> you can add directly in the page (also not really recommended)
+- external -> linking external .css file -> all the cool kids use it
+  * presentation and styling should be always a separate part of the app
+
+## CSS selectors
+
+selector    property    value    
+   a     {  background: red;  }
+   
+also known as selector/declaration block
+every declaration ends with a semicolon
+CSS selectors are used to "find" (or select) HTML elements based on their element name, id, class, attribute, and more.
+selectors can be grouped ex using colon sintax:
+h1,h2,h3{...}
+Note: Do not add a space between the property value and the unit (such as margin-left: 20 px;). The correct way is: margin-left: 20px;
+
+
+## Comments
+A CSS comment starts with /* and ends with */. Comments can also span multiple lines:
+
+## Class vs ID
+- No diff from the browser perspective
+- ID -> unique, cannot be repeated on page -> it's targeted with #
+- Class can be reused. -> it's targeted with .
+- As a general rule it is better to use general styles..
+Note: An id name cannot start with a number!
+- an element can have more than one class
+   
+##Colors in CSS
+- color names: red, blue, green
+- HTML5 color names : coral, tomato, orange, MediumSeaGreen, LightGray , powederblue
+- you can set colors for text, background, borders etc
+https://www.w3schools.com/colors/colors_names.asp
+
+- HexaDecimal #00ff00 #0f0 (shortcut) -> #rrggbb
+    Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).
+    For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the others are set to the lowest value (00).
+
+- RGB rgb(0, 0, 255) rgba(0, 0, 255, 0.2)
+
+- hsl(hue, saturation, lightness) hsla(hue, saturation, lightness, alpha)
+    Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+    Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+    Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+
+
+##Backgrounds
+    The CSS background properties are used to define the background effects for elements.
+    CSS background properties:
+
+- background-color -> see CSS colors
+- background-image -> specifies url to image. by default image is repeated to cover the entire element
+- background-repeat -> sometimes we need to use pattern image. you can repeat-x or repeat-y or no-repeat
+- background-attachment -> specifies how the image is attached.. can be fixed/cover
+- background-position -> specifies the position of the background -> can be right/top/bottom/left
+
+there is a shorthand..
+  background: #ffffff url("img.png") no-repeat right top;
+  When using the shorthand property the order of the property values is:
+    background-color
+    background-image
+    background-repeat
+    background-attachment
+    background-position
+
+... there are more background props to be discovered(clip, size, origin).. feel free to go to w3schools 
+
+##Borders
+
+The CSS border properties allow you to specify the style, width, and color of an element's border.
+### border-style 
+    to specify wich kind of border you use
+    dotted/dashed/solid/double/groove/ridge/inset/outset/none/hidden
+    
+### border-width
+The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.
+
+### border-color
+### individual sides
+p {
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+}
+
+### shorthand:
+The border property is a shorthand property for the following individual border properties:
+
+    border-width
+    border-style (required)
+    border-color
+    
+    border: 5px solid red;
+    
+
+## Margins
+    The same as borders and backgrounds:
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left
+    +
+    shorthand in clockwise -> explain clockwise trick
+    
+    If you want to center an element there is the `auto` trick
+    Multiple inline elements with diff margins will collapse their margin so the element with the biggest vertical margins wins
+    *Note negative values are allowed
+    
+## Paddings
+The CSS padding properties are used to generate space around an element's content, inside of any defined borders.
+Same as borders + margins -> padding-top/right/bottom/left + shorthand
+*Note -> negative values are NOT allowed
+
+## Dimensions
+
+    height + width
+    max-height + max-width
+    min-height + min-width
+
+## Margin vs Padding vs Border
+  Width of the element is width of the padding. If you want total width take in account padding/borders/margins
+- rule is: content -> padding -> border -> margin 
+ elements also have an outline ouside the border
+
+## The Box Model
+    Content - The content of the box, where text and images appear
+    Padding - Clears an area around the content. The padding is transparent
+    Border - A border that goes around the padding and content
+    Margin - Clears an area outside the border. The margin is transparent
+    
+    Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+    Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+    
+    *Tip: use  box-sizing: border-box; to include padding and margins in the width and height
+
+## Texts
+- color
+- text-align -> left,right, center or justified
+- text-decoration -> overline, line-through, underline, none
+- text-transformation -> uppercase, lowercase, capitalize
+- text-indent -> will indent first line of text
+- letter-spacing -> space between letters
+- line-height -> space between lines
+- direction -> rtl, ltr
+- word-spacing -> space between words
+- text-shadow -> add shadow to text -> first horizontal shadow, vertical shadow, color of shadow
+
+## Fonts
+- font-family -> specify the familly of the font.. should have fallbacks
+ex
+    p {
+        font-family: "Times New Roman", Times, serif;   
+        }
+        
+    - Check list of web safe fonts;    
+ 
+- font-style -> normal, italic, oblique
+- font-size
+
+The font-size value can be an absolute, or relative size.
+    
+    Absolute size:
+    Sets the text to a specified size
+    Does not allow a user to change the text size in all browsers (bad for accessibility reasons)
+    Absolute size is useful when the physical size of the output is known
+    
+    Relative size:
+    Sets the size relative to surrounding elements
+    Allows a user to change the text size in browsers
+    
+    Note: If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em).
+
+- font-weight: normal, bold
+
+Responsive font sizes using vw -> viewport units
+<h1 style="font-size:10vw">Hello World</h1>
+*Note Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+
+## Icons
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+## Styling links:
+    a:link - a normal, unvisited link
+    a:visited - a link the user has visited
+    a:hover - a link when the user mouses over it
+    a:active - a link the moment it is clicked
+    
+    When setting the style for several link states, there are some order rules:
+    a:hover MUST come after a:link and a:visited
+    a:active MUST come after a:hover
+
+
+## Display Property
+- display property:
+ The default display value for most elements is block or inline.
+ *Note: Setting the display property of an element only changes how the element is displayed, 
+ NOT what kind of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.
+- visibility property 
+
+## Positions
+ - static - default value
+ - relative - positioned relative to its normal position
+ - fixed - is positioned relative to the viewport
+ - absolute - is positioned relative to the nearest positioned ancestor
+ - sticky - is positioned based on the user's scroll position
+ Note: IE/Edge 15 and earlier versions do not support sticky position.
+ 
+ - z-index property for layering
+ 
+ HTML elements are positioned static by default.
+ 
+ ## Overflow
+ - overflow property controls what happens to content that is too big to fit into an area.
+ 
+    visible - Default. The overflow is not clipped. It renders outside the element's box
+    hidden - The overflow is clipped, and the rest of the content will be invisible
+    scroll - The overflow is clipped, but a scrollbar is added to see the rest of the content
+    auto - If overflow is clipped, a scrollbar should be added to see the rest of the content
+    
+## Floats
+    left - The element floats to the left of its container
+    right- The element floats to the right of its container
+    none - The element does not float (will be displayed just where it occurs in the text). This is default
+    inherit - The element inherits the float value of its parent
+    
+## Combinators
+A combinator is something that explains the relationship between the selectors.
+    descendant selector (space)
+    
+    all <p> elements inside <div>
+     div p {
+        background-color: yellow;
+    }
+    
+    child selector (>)
+    
+    all <p> elements that are immediate children of a <div>
+    div > p {
+        background-color: yellow;
+    }
+    
+    adjacent sibling selector (+)
+    
+    all <p> elements that are placed immediately after <div>
+    div + p {
+        background-color: yellow;
+    }
+    
+    general sibling selector (~)
+    all <p> elements that are siblings of <div>
+    div ~ p {
+        background-color: yellow;
+    }
+
+## Pseudo Classes
+
+selector:pseudo-class {
+    property:value;
+}
+   link/visited/hover/active
+   also:
+   :first-child/:last-child/:nth-child(n)/:not(selector)
+   
+## Pseudo Elements
+selector::pseudo-element {
+    property:value;
+}
+
+::first-line/::first-letter/::before/::after/::selection
+*Note before/after often used to insert content 
+    h1::after {
+        content: url(smiley.gif);
+    }
+    
+## Opacity
+ Not supported by IE
+ Often used with pseudo classes like hover
+ 
+## Specificity
+If there are two or more conflicting CSS rules that point to the same element, the browser follows some rules to determine which one is most specific and therefore wins out.
+Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element.
+The universal selector (*) has low specificity, while ID selectors are highly specific! 
+Note: Specificity is a common reason why your CSS-rules don't apply to some elements, although you think they should.
+
+Inline styles - An inline style is attached directly to the element to be styled. Example: <h1 style="color: #ffffff;">.
+
+IDs - An ID is a unique identifier for the page elements, such as #navbar.
+
+Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.
+
+Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after.
+
+Tiebreaker: Equal specificity: the latest rule counts
+
+## Flexbox
+The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+
+- To start using the Flexbox model, you need to first define a flex container.
+    .flex-container {
+      display: flex;
+    }
+    flex-direction -> defines in which direction the container wants to stack the flex items ex(column/column-reverse/row/row-reverse).
+    flex-wrap -> specifies whether the flex items should wrap or not (wrap/nowrap/wrap-reverse)
+    flex-flow -> is a shorthand property for setting both the flex-direction and flex-wrap properties (eg. row wrap).
+    justify-content -> property is used to align the flex items (center)flex-start/flex-end/space-around/space-between
+    align-items -> aligns the flex items at the beginning of the container (this is default) flex-start/flex-end/stretch/baseline/space-between/space-around
+    align-content
+    
+    Perfect centering: Set both the justify-content and align-items properties to center, and the flex item will be perfectly centered:
+    
+ - For the child elements we have the following properties
+    order -> property specifies the order of the flex items.
+    flex-grow -> specifies how much a flex item will grow relative to the rest of the flex items.
+    flex-shrink -> specifies how much a flex item will shrink relative to the rest of the flex items
+    flex-basis -> property specifies the initial length of a flex item.
+    flex -> property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.
+    align-self -> specifies the alignment for the selected item inside the flexible container. -> overwrides container property
+    
+## Media Queries
+    Media queries can be used to check many things, such as:
+    
+    width and height of the viewport
+    width and height of the device
+    orientation (is the tablet/phone in landscape or portrait mode?)
+    resolution
+    
+    @media not|only mediatype and (expressions) {
+        CSS-Code;
+    }
+    
+    @media screen and (min-width: 480px) {
+        body {
+            background-color: lightgreen;
+        }
+    }
+
+
+## Bootstrap
+
+It's a CSS framework
+Latest versions are designed to be mobile-first, which means your page will stack correctly to any kind of device
+
+ - .container and .container-fluid
+ - grid system:mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases
+
+
+https://getbootstrap.com/docs/3.3/css/
+https://bootswatch.com
+
+
+
+## References:
+
+(w3schools)[https://www.w3schools.com/css/default.asp]

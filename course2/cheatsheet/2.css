@@ -1,0 +1,207 @@
+/*reset browser style*/
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+
+body{
+    
+    background-color:#f4f4f4; /*hexa color names*/
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px; /*we can use em, rem, points etc*/
+    font-weight:normal; /*we can use numbers for the weight*/
+    /*font: normal 16px Arial, Helvetica, sans-serif;*/
+    line-height:1.2em;
+    margin:0;
+}
+
+.box-1{
+    background-color:gray;
+    color:#fff;
+    
+    /*borders*/
+    border-right:5px red dashed; /*size, color, style*/
+    border-left: 2px blue solid;
+    border-width:3px; /*overwrites the borders we had on top*/
+    border-top:dotted;
+    border-bottom:double;
+    
+    /*padding*/
+    padding:20px;
+    margin-top:20px;
+}
+
+/*styling children of the box-1*/
+.box-1 h1{
+    font-family:"Times New Roman";
+    font-weight: 500;
+    font-style:italic;
+    text-decoration:underline;
+    text-transform: uppercase;
+    letter-spacing:0.2em;
+    word-spacing: 1em;
+}
+
+.box-2{
+    border:3px dotted lightGray;
+    padding:20px;
+    margin:20px 0;
+}
+
+.categories{
+    border: 1px lime solid;
+    margin:10px;
+    padding:10px;
+    border-radius:15px;
+}
+
+.categories h2{
+    text-align:center;
+}
+
+.categories ul{
+    padding:0;
+    list-style:square;
+    list-style-type:circle;
+    padding-left:20px;
+    /*list-style-image => will replace the dot of the list*/
+}
+
+.categories li{
+    padding-bottom:8px;
+    border-bottom:1px #333 dotted ;
+}
+
+a{
+    text-decoration:none;
+    color:#000;
+}
+
+a:hover{
+    color:red;
+}
+
+a:active{
+    color:green;
+}
+
+a:visited{
+    /*color:yellow;*/
+}
+
+.container{
+    width:80%; /*you can set it using fixed units like px*/
+    margin:auto; /*sets even margins*/ 
+    /*
+        the same as:
+        margin-left: auto;
+        margin-top:auto;
+        margin-bottom:auto;
+        margin-right:auto
+        
+        or:
+        margin: 5px 10px
+    */
+}
+
+
+ /* form */
+ 
+ .box3{
+     padding:20px;
+ }
+ 
+ .box3 .form-group{
+     padding-bottom:15px;
+ }
+ 
+ .form-group label{
+     display:block;
+ }
+ 
+ .form-group input[type="text"], .form-group textarea{
+     padding:8px;
+     width:100%;
+ }
+ 
+ input[type="submit"]{
+     background:darkred;
+     color:white;
+     padding:10px;
+ }
+ 
+ .block{
+     float:left;
+     width:33.3%;
+     background:red;
+     border: 1px solid gray;
+     padding:10px;
+     box-sizing:border-box; /*apply the border and padding into the width*/
+ }
+ .clearfix{
+     clear:both;
+ }
+ 
+ .block-float-left{
+     float:left;
+ }
+ 
+ .sidebar{
+     width:32%;
+     margin-right:1.5%;
+     text-align:justify;
+ }
+ 
+ .main-content{
+     width:66%;
+     text-align:justify;
+ }
+ 
+ .play-with-boxes div {
+     padding:20px;
+     width:150px;
+     height:150px;
+     margin:10px;
+     background:gray;
+     float:left;
+ }
+ 
+ .pos-relative div{
+     background:red;
+     width:20px;
+     height:20px;
+ }
+ 
+ .image-demo{
+     width:100%;
+     height:600px;
+     border:1px solid #000;
+     margin-top:30px;
+     position:relative;
+     background-image:url('image.jpg');
+     background-repeat:no-repeat;
+     background-position:100px 200px;
+     background-position:center top;
+ }
+ 
+ /*pseudoclass*/
+ .categories ul li:first-child{
+     background: red;
+ }
+ 
+ .categories ul li:last-child{
+     background: blue;
+ }
+ 
+ .categories ul li:nth-child(3){
+     background: pink;
+ }
+ 
+.categories ul li:nth-child(even){
+     background: gray;
+ }
+ 
+ 
+ 

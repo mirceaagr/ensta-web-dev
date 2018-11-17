@@ -1,0 +1,193 @@
+body{
+	margin-top:60px;
+}
+
+#sidebar-content{
+	text-align:center;
+	width:250px;
+	background: #ffedd8;
+	padding:20px 0;
+}
+
+#sidebar-content .image{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+}
+
+#sidebar-content ul.list-group{
+	text-align:left;
+}
+
+#sidebar-content ul.list-group li.list-group-item{
+	border: none;
+	padding:10px;
+}
+
+#sidebar-content h1{
+	font-size:2em;
+	color:orange;
+	margin:none;
+	text-shadow: 1px 1px 1px white
+}
+
+#person-title{
+	background:#000;
+	padding:4px;
+	border-radius:10px;
+	color:#fff;
+	font-size:0.9em;
+}
+
+/* Carousel */
+#carousel-example-generic{
+	margin-top:20px;
+}
+
+.carousel-inner{
+	height:300px;
+}
+
+.carousel-inner > .item > img {
+	width:100%;
+}
+
+/* Sections */
+
+section{
+	padding-top:30px;
+}
+
+section h2:first-letter{
+	color:orange;
+}
+
+.thumbnail{
+	min-height:480px;
+}
+
+#about-me{
+	opacity:0.7;
+	background-image: url('https://picsum.photos/g/300/200/?img=1234');	
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size:cover;
+	padding:20px;    
+}
+
+#about-me h2, #about-me p{
+	color:black;
+	opacity:1;
+}
+
+.item-service{
+	background:#f3f3f3;
+	border-radius:15px;
+	text-align:center;
+	padding:15px;
+}
+
+.item-service i {
+	width:150px;
+	height:150px;
+	background: white;
+    padding: 40px;
+    border-radius: 100%;
+}
+
+.item-service:hover, .item-service:hover p.text-muted{
+	background:orange;
+	color:white;
+}
+
+.item-service:hover i {
+	color:orange;
+}
+
+.progress{
+	margin-bottom:5px;
+}
+
+/* timeline */
+ul.timeline{
+	list-style-type:none;
+}
+
+ul.timeline li{
+    border-left: 2px solid orange;
+    padding-left: 20px;
+    margin-top:-20px;
+}
+
+ul.timeline li:first-child{
+	border-left:none;
+	margin-bottom:35px;
+}
+
+.line-title::before{
+	content:"\2192";
+	font-weight: 800;
+	color:orange;
+	margin-left:-20px;
+	margin-right:20px;
+}
+
+
+.timeline-header{
+	float:left;
+	width: 50px;
+    border-radius: 50px;
+    height: 50px;
+    background: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+.line-title{
+	color:orange;
+}
+
+
+/* Spacing */
+
+.space-10{
+	width:100%;
+	clear:both;
+	height:10px;
+}
+
+.space-20{
+	width:100%;
+	clear:both;
+	height:20px;
+}
+
+.space-50{
+	width:100%;
+	clear:both;
+	height:50px;
+}
+
+.flex-container-center{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+footer{
+	padding:15px;
+	background-color:black;
+	width:100%;
+	display: flex;
+	color:white;
+	align-items: center;
+	justify-content: center;
+	border-radius:10px;	
+}
+
+
+
+
