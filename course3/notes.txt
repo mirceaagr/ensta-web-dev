@@ -1,0 +1,57 @@
+## What is PHP
+- Programming language (unlike HTML and CSS)
+- It's the most used backend language for web development
+* For backend development you could use whatever language you like : Python, Java, C# etc
+
+## How to use PHP.
+- You need a server that can handle PHP : Apache or Tomcat
+- PHP code should not be visible in the page source.
+- You can embed PHP code in the HTML or the other way around
+- Php code starts with <?php and ends with ?>
+
+## Variables
+- Variables start with `$`
+- Variable names are case sensitive
+- Variables get a data type when they receive a value (on the assignment time)
+- There are superglobals variables like : $_SESSION, $_SERVER, $_POST, $_GET and more
+
+
+## Data types and operators
+- Data types can be strings, integer, float(double), Array, Object and so on.
+- Strings can be concatenated using `.`
+- constants can be created with `define`
+- as any other programming language you can do all forms of arithmetics + - / * %
+- you can do increment/decrement in postfix/sufix way with ++ -- += -=
+- you can cast to different types
+- comparison operators: == > < >= <=
+
+## Conditionals
+- if elseif else statements
+- switch
+
+## Loops:
+- while
+- for
+- do while
+- foreach -> for array iterations
+- you can nest conditionals inside iterations
+- break will stop the current iteration of the loop
+- die() and exit() will stop the execution of the php script
+
+## Arrays:
+- Arrays are data types that are used to store collections of data
+- they store the data using key value pairs values
+- Arrays can be indexed, associative,  multidimensional
+- To create an array you use the array() function or the shorthand []
+- To iterate through an array you can use loops but the most used type of loop is foreach
+- Arrays can be sorted, manipulated, merged etc.
+
+## Submiting forms:
+- Forms can be submited via POST, GET, PUT, DELETE request types.
+- All of them are the same when it comes to security.. all of them can be intercepted.
+- GET has also limit in the term of the informations it can handle -> max 2000 chars
+- GET should never be used to send sensitive informations
+- GET and POST requests will create an associative array with the content of the form/
+
+##References:
+- php.net
