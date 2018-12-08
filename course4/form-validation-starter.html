@@ -1,0 +1,55 @@
+<html>
+	<head>
+	     <title>Form Validation - exer</title>
+	</head>
+	<body>
+	    <div id="form" class="formlayout">
+		<form id="signForm" method="get">
+			<div class="row">
+				<label class="label" for="inputFName">First Name:</label>
+				<div class="element">
+					<input type="text" id="inputFName">
+				</div>
+				<div id="inputFNameErr" class="error"></div>
+			</div>
+			<div class="row">
+				<label class="label" for="inputSName">Surname:</label>
+				<div class="element">
+					<input type="text" id="inputSName">
+				</div>
+				<div id="inputSNameErr" class="error"></div>
+			</div>
+			<div class="row">
+				<label class="label" for="inputEmail">Email:</label>
+				<div class="element">
+					<input type="text" id="inputEmail">
+				</div>
+				<div id="inputEmailErr" class="error"></div>
+			</div>
+			<div class="row">
+				<label class="label" for="inputPassword">Password:</label>
+				<div class="element">
+					<input type="password" id="inputPassword">
+				</div>
+				<div id="inputPasswordErr" class="error"></div>
+			</div>
+			<div class="row">
+				<label class="label" for="inputPassword2">Confirm Password:</label>
+				<div class="element">
+					<input type="password" id="inputPassword2">
+				</div>
+				<div id="inputPassword2Err" class="error"></div>
+			</div>
+			<div class="actionRow">
+				<div class="button">
+					<button id= "resetBtn" type="button">Reset</button>
+				</div>
+				<div class="button">
+					<button type="submit">Sign up</button>
+				</div>
+			</div>
+		</form>
+		</div>
+		<div id="success" class="hidden"></div>
+	</body>
+</html>

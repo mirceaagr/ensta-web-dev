@@ -1,0 +1,51 @@
+body,html{
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 100%;
+    background-image: url("cover.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+#drums-container{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 75%;
+   height: 100vh;
+} 
+.key{
+    margin: 0;
+    padding: 0;
+    width: 8%;
+    height: 11%;
+    border: 4px solid teal;
+    border-radius: 10px;
+    text-shadow: 0 0 5px black;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease;
+}
+.key h4,span{
+    margin: 0;
+}
+.key h4{
+    color: white;
+    font-size: 22px;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+}
+.key span{
+    color: yellow;
+}
+.playing{
+     transform: scale(1.1); 
+     border: 4px solid #ffc600;
+     box-shadow: 0 0 10px #ffc600;
+}

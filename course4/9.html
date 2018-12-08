@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+    
+    $("button").click(function(){
+        $.ajax(
+            {
+                url: "https://jsonplaceholder.typicode.com/posts",
+                type: 'GET',
+                crossDomain: true,
+                dataType: 'jsonp',
+                success: function(posts){
+                    for(var i = 0; i<posts.length; i++){
+                        console.log(posts[i])
+                        $('#posts').append(`<div class=\"post-item\">
+                            <h4>${posts[i].title}</h4>
+                            <p>${posts[i].body}</p>
+                            <hr>
+                        </div>`)
+                    }
+                    
+                },
+                
+            }
+        );
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Paragraph we need to throw away.</p>
+<p>Hide me</p>
+<p>Hide this one also</p>
+
+<button>Get Posts</button>
+<div id="posts">
+    
+</div>
+
+</body>
+</html>

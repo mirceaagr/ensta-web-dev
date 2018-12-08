@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>1.html</title>
+    </head>
+    
+    <body>
+        
+        <script>
+         function raiseToPower(a, b){
+             console.log(`Raising ${a} to ${b}`);
+             return a**b;
+         }
+         
+         (function(){alert("something")})(); // the function is self invoked
+         function alertMe(){alert("something else")} // the function waits to be invoked later
+         
+         (function sayHello(){document.write("IIFE:", "Immediatly invoked function element", "<br />")})();
+         
+         document.write("4 to the power of 2:", raiseToPower(4,2), "<br />");
+         document.write("Do not forget to invoke the function:", raiseToPower, "<br />"); //outputs the function itself
+         alertMe(); // finally we call our function
+        </script>
+    </body>
+
+</html>

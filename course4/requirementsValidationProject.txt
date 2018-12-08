@@ -1,0 +1,25 @@
+Display a message when you submit a form
+
+Call a validate function when you submit a form
+
+Move the function to an external JavaScript file
+
+Retrieve the values entered into a form and display to screen
+
+Validate all fields have been populated and alert the user if not
+
+Display an error message beside each field which has not been populated
+
+Write a function to clear error messages before validating form
+
+Write the functionality behind the reset form button
+
+Validate the length of password
+
+Validate the password and confirm password fields match
+
+Update the validate function to keep track of whether the form is valid. If it is display a message to the user.
+
+Update the behaviour on passing validation to hide form and display a welcome message using the entered information.
+
+Validate the format of the email address entered

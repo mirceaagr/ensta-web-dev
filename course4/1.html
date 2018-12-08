@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>1.html</title>
+    </head>
+    
+    <!--Javascript can be added inline. In this case we specify an event listener-->
+    <body onLoad="console.log('page loaded')">
+        <div id="sayHello"></div>
+        <!--Also we can add javascript in the same file as our html-->
+        <script>
+          var hoistedVar; // we declare here but we don not assign value
+        
+          alert(hoistedVar);
+          
+          hoistedVar = "I am hoisted"; // variables created with var get hoisted(pulled up).. can be VERY DANGEROUS.. be careful
+          // amazon env might use strict mode for javascript 
+        
+          // You create variables that store values with var
+          // Prompt opens a popup that requests info
+          var yourName = prompt("What is your name?");
+          let anotherVariable;//also we can create variables with let. let variables behave as you expect
+          /*let is block scoped*/
+         
+        
+          // It performs different actions depending on conditions
+          if(yourName != null){
+        
+            // Set text in an HTML element with the id sayHello
+            // You concatenate (combine) strings with +
+            document.getElementById("sayHello").innerHTML = "Hello " + yourName;
+          } else {
+        
+            // Alert opens a popup that contains a message
+            alert("Please Enter Your Name Next Time");
+          }
+        
+        // ---------- VARIABLES ----------
+        // variable names can't start with a number, contain spaces, but can
+        // contain letters, numbers, underscores or $ (Are case sensitive)
+        var myName = "Mircea";
+        var myAge = 40;// NOT true :)
+        
+        // Variables don't have a defined type, which can cause problems
+        myName = 100;// now this var is an integer
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>1.html</title>
+    </head>
+    
+    <body>
+
+        <!-- Open alert on click -->
+        <a href="JavaScript:void(0)" onClick="bePolite('Hello');">Say Hello</a><br />
+        
+        <!-- Call a function on click -->
+        <a href="JavaScript:void(0)" onClick="bePolite('I am very polite and will say hello');">Be Polite</a><br />
+        
+        <a href="JavaScript:void(0)" 
+                onmouseover="this.style.color='red';"
+                onmouseout="this.style.color='green';"
+                ondblclick="this.text='You Double Clicked Me'"
+                onmousedown="this.text='Don\'t Press So hard'"
+                onmouseup="this.text='Thank You'">
+            Make me Red
+            </a><br />
+            
+            <hr/>
+        <div id="inputData"></div>
+        
+        <form id="exForm">
+            <input type="text" id="exFormName" name="name" placeholder = "name"/>
+            <br />
+            <input type="text" id="exBla" name="bla" placeholder="bla"/>
+            <input type="submit" value="Submit"/>
+        </form>
+        
+        <br />
+        <div id="mouseX"></div>
+        <div id="mouseY"></div>
+        
+        
+        <script>
+            /*Events*/
+            function bePolite(mess){
+              alert(mess);
+            }
+            
+            function submitFormFunc(event){
+                alert("Your name is " + document.getElementById('exFormName').value);
+                event.preventDefault(); // the form will submit to itself by default
+            }
+            
+            /*we add an event listener on the form*/
+            document.getElementById("exForm").addEventListener("submit", submitFormFunc);
+            
+            // Change text when the input gains focus
+            document.getElementById('exBla').onfocus = function(event) {
+              document.getElementById('inputData').innerHTML = "Input Gained Focus";
+            }
+            
+            // Change text when the input loses focus
+            document.getElementById('exBla').onblur = function(event) {
+              document.getElementById('inputData').innerHTML = "Input Lost Focus";
+            }
+            
+            // Change text when text is selected
+            document.getElementById('exBla').onselect = function(event) {
+              document.getElementById('inputData').innerHTML = "Text Selected";
+            }
+            
+            // Add a listener that triggers a function on browser resize
+            window.addEventListener("resize", browserResized);
+            
+            function browserResized() {
+              document.getElementById('inputData').innerHTML = "I've been resized";
+            }
+            
+            // Get mouse x y coordinates
+            // also we can add event listeners like this using anonymus functions
+            document.body.onmousemove = function(e) {
+                e = e || window.event;
+            
+                // Get pageX, pageY : Mouse position relative to the html doc
+                var pageX = e.pageX;
+                var pageY = e.pageY;
+                if (pageX === undefined) {
+            
+                    // clientX, clientY : Mouse position relative to the browsers viewport
+                    // scrollLeft, scrollTop : Pixels an element is scrolled left or
+                    // from the top
+                    pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                    pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+                }
+            
+                document.getElementById('mouseX').innerHTML = pageX;
+                document.getElementById('mouseY').innerHTML = pageY;
+            };
+            
+            
+        </script>
+    </body>
+
+</html>

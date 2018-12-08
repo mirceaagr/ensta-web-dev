@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>1.html</title>
+    </head>
+    
+    <body>
+        
+        <script>
+        // ---------- LOOPING ----------
+        
+        // while loops as long as a condition is true
+        var i = 1;
+        while (i <= 10){
+          document.write(i, ", ");
+          i++;
+        }
+        document.write("<br />");
+        
+        for(var j = 0; j <= 20; j++){
+          // If j is divisible by 2 then skip back to the top of the loop
+          if((j % 2) == 0){
+            continue; // skips to the top
+          }
+          // If j is equal to 9 break completely out of the loop
+          if(j == 9){
+            break;
+          }
+          document.write(j, ", ");
+        }
+        document.write("<br />");
+        
+        //Objects
+        var student = {
+          name : "Doe", 
+          address : "123 Marechaux", // properties have to be separated by comas
+          grade : 20,
+          gradeHistory:[
+              5,6,7,8
+            ]
+        };
+        
+        student.surname = "John" // add extra properties to the student object
+        
+        
+        // for in cycles through an enumerable properties of an object
+        for(var k in student){
+          document.write(student[k], "<br />");
+        }
+        
+        // ---------- ARRAYS ----------
+        // Arrays have variable sizes and can contain multiple types in JS
+        
+        var students = ["Soline", "Antoine"];
+        
+        // Access first array item
+        document.write("1st Student : ", students[0], "<br />");
+        
+        // Add an item
+        students.push("Alexandre");
+        students[3] = "Emeline";
+        
+        // Delete an index
+        delete students[2];
+        
+        // Sort an array (reverse() for reverse sort)
+        // Works for sorting strings
+        students.sort();
+        
+        // Sort numbers
+        var numbers = [4,3,9,1,20,43];
+        
+        // Descending sort return y - x
+        numbers.sort(function(x,y){ return x - y });
+        document.write("Num Array : ", numbers.toString(), "<br />");
+        
+        // Combine arrays
+        var missingStudents = ['Batist'];
+        var combinedArray = students.concat(missingStudents);
+        
+        // Remove the last item
+        // Def not tomSmith.poop() :)
+        students.pop();
+        // Deletes the first item
+        students.shift();
+        // Adds item to the first index
+        students.unshift("Pythouille");
+        
+        for (var i = 0; i < students.length; i++) {
+          document.write(students[i], "<br />");
+        }
+
+        </script>
+    </body>
+
+</html>

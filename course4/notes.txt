@@ -1,0 +1,2 @@
+A good resource to start JS:
+http://amzn.to/1WbMYvm

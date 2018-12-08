@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>1.html</title>
+    </head>
+    
+    <body>
+        
+        <!-- ---------- ELEMENT STYLING ---------- -->
+        <!-- See all of them here http://www.w3schools.com/jsref/dom_obj_style.asp -->
+        
+        <div id="sampDiv">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget turpis eget quam luctus malesuada ut ac nulla. Suspendisse fermentum magna neque, a auctor felis pretium eget. Fusce ornare feugiat magna, ut faucibus sapien congue ut. Nunc nec fringilla ex, nec varius nisl. Ut eget laoreet nisi. Aenean quis venenatis mauris, at volutpat ante. Donec sollicitudin lacinia ornare. In quis accumsan ligula, id egestas enim.
+        </div>
+        
+        <button id="chgBkColor">Background Color</button>
+        <button id="chgBkImg">Background Image</button>
+        <button id="chgBorderStyle">Border Style</button>
+        <button id="chgBorderWidth">Border Width</button>
+        <button id="chgBorderColor">Border Color</button>
+        <button onClick="getMeToGoogle()">Go to Google</button>
+
+        
+        <script type="text/javascript">
+        
+        function getMeToGoogle(){
+          window.location.replace("https://google.com");
+        }
+
+        // Change background color
+        document.getElementById('chgBkColor').onclick = function(event) {
+          document.getElementById('sampDiv').style.backgroundColor = "#EFDECD";
+        }
+        
+        // Change background image
+        document.getElementById('chgBkImg').onclick = function(event) {
+          document.getElementById('sampDiv').style.backgroundImage = "url('https://picsum.photos/200/300/?random')";
+        }
+        
+        // Change border style
+        document.getElementById('chgBorderStyle').onclick = function(event) {
+          document.getElementById('sampDiv').style.borderStyle = "dashed";
+        }
+        
+        // Change border width
+        document.getElementById('chgBorderWidth').onclick = function(event) {
+          document.getElementById('sampDiv').style.borderWidth = "thick";
+        }
+        
+        // Change border color
+        document.getElementById('chgBorderColor').onclick = function(event) {
+          document.getElementById('sampDiv').style.borderColor = "red";
+        }
+        
+        // Get current web page info
+        document.write("Current URL : ", window.location.href, "<br />");
+        document.write("Current Host : ", window.location.hostname, "<br />");
+        document.write("Current Path : ", window.location.pathname, "<br />");
+
+        </script>
+    </body>
+
+</html>

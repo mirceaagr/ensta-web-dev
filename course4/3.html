@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>1.html</title>
+    </head>
+    
+    <body>
+        
+        <script>
+            // ---------- CONDITIONALS ----------
+            // Relational Operators : == != > < >= <=
+            // === : Equal value and type
+            // Logical Operators : && \\ !
+            
+            var age = 8;
+            if ((age >= 5) && (age <= 6)){
+              document.write("Go to Kindergarten<br />");
+            } else if (age > 18) {
+              document.write("Go to College<br />");
+            } else {
+              document.write("Go to Grade ", age - 6, "<br />");
+            }
+            
+            document.write("true || false = ", true || false, "<br />");
+            document.write("!true = ", ! true, "<br />");
+            document.write("\"5\" == 5 = ", ("5" == 5), "<br />");
+            document.write("\"5\" === 5 = ", ("5" === 5), "<br />");
+            age = 5;
+            // Switch is used to match a limited number of options
+            switch(age) {
+              case 5 :
+              case 6 : // this case encompass 5 and 6
+                document.write("Go to Kindergarten<br />");
+                break;
+            
+              case 7 :
+                document.write("Go to 1st Grade<br />");
+                break;
+            
+              default :
+                document.write("Subtract 6 from your age<br />");
+            }
+            
+            // Ternary Operator assigns a value based on a condition
+            // (condition) ? iftrue : ifFalse
+            var canIVote = (age >= 18) ? true : false;
+            document.write("Can I Vote(Drink) : ", canIVote, "<br />");
+        </script>
+    </body>
+
+</html>
+
+
