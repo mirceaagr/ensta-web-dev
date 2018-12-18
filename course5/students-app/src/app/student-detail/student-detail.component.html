@@ -1,0 +1,19 @@
+Name: 
+<label for="">Name</label>
+<input type="text" [(ngModel)]="student.name">
+
+Age : {{student.age}} <br>
+Grades: 
+<ul>
+  <li *ngFor="let grade of student.grades">
+    <div *ngIf="grade > 2; else badGrade">
+        Good Grade: {{grade}}
+    </div>
+    <ng-template #badGrade>
+        Bad Grade: ######
+    </ng-template>
+    
+  </li>
+</ul>
+<hr>
+{{student | json}}
