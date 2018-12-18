@@ -21,3 +21,10 @@
 - form validation
 - jQuery
 - project -> validate contact form on the website, add GDPR notification, swap profile image
+
+## Course 5 -> basics of Angular
+- instalation
+- components
+- services
+- routing
+- data binding
