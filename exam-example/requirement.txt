@@ -1,0 +1,31 @@
+Your web app will have to manage a collection of cars and will have to describe your car business.
+A car entity will have a brand (string), a model (string), fabrication year (number), price (number), km (number), an engine (Engine class) and a short description(description) field.
+Engine class will have the following fields: fuel type(string), power(number), fuel consumption(number)
+The application will implement bootstrap 3 framework
+
+1 - Create a new angular car app using angular cli (0.5p)
+2 - Your app will have 3 pages -> home(dashboard), cars page and report page. 
+    Create the needed components and use routing to create navigation between them (1p)
+3 - Create the car class/model using typescript (0.5p)
+4 - Create the engine class/model using typescript (0.5p)
+5 - Create the components needed for listing a hardcoded list of cars, which you will have to create. (1p)
+6 - Create a component to add a car in the previously hardcoded list using a service and angular forms (template or reactive, it is your choice) (1p)
+7 - Create a json server to store the cars (1p)
+8 - Replace the hardcoded list with the server using angulars HTTPClient (1p)
+9 - Implement the edit/delete functionalities for the car list (1p)
+10 - Implement validation for the forms -> 
+    every field will be required, 
+    max power for the car engine is 100, 
+    max length for the brand and model is 50 chars (1.5p)
+If you implement steps 1 to 10, you get 9 out of 10 possible points. In order to get MAX grade you have to also implement one of the following:
+
+# For MAX grade one of the following:
+
+- Implement a report page that will display the total value of the cars, the oldest car in the fleet, the most used car in the fleet and the most fuel efficient car
+OR
+- Store the brands and models in the json server and populate the form lists dinamically (brand and model will become selects with predefined values)
+OR
+- Use reactive forms instead of template forms and hide fuel consumption in case the fuel type is electric
+(1p)
+* Time to complete 2.5 hours. The students have access to internet and the course materials.
+Max Grade: 10 points;
