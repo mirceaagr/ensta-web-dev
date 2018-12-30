@@ -1,0 +1,42 @@
+
+<div class="row">
+	<div class="container">
+		<div class="col-md-6">
+			<form (ngSubmit)="onSubmit()" #studentForm="ngForm">
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input required minlength="3" maxlength="10" 
+					[(ngModel)]="uglyBoy.name" class="form-control" type="text" name="name" id="name" #name="ngModel">
+					
+					<div class="alert alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)"	>
+							<div *ngIf="name.errors.required"> This field is required </div>
+							<div *ngIf="name.errors.minlength"> Min length should be 3 </div>
+							<div *ngIf="name.errors.maxlength"> Max length should be 10 </div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="age">Age</label>
+					<input required minlength="2" min="10" max="20" [(ngModel)]="uglyBoy.age" class="form-control" type="text" name="age" id="name" #age="ngModel">
+					
+					<div class="alert alert-danger" *ngIf="age.invalid && (age.dirty || age.touched)"	>
+							<div *ngIf="age.errors.required"> This field is required </div>
+							<div *ngIf="age.errors.min"> Min length should be 10</div>
+							<div *ngIf="age.errors.max"> Max length should be 20 </div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label  for="address">Address</label>
+					<textarea  pattern="Paris" [(ngModel)]="uglyBoy.address" class="form-control" name="address" id="address" rows='5'></textarea>		
+				</div>
+
+		
+				<button class="btn btn-info" type="submit">Post Ugly Buoy</button>
+			</form>
+
+		</div>
+		<div class="col-md-6"></div>
+	</div>
+</div>
+

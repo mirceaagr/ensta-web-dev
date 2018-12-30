@@ -1,0 +1,5 @@
+<div *ngFor="let student of students" class="student">
+  <app-student-detail [student]="student"></app-student-detail>
+</div>
+
+<button (click)="postStudent()"> POST A STUDENT</button> 
