@@ -3,14 +3,14 @@ A car entity will have a brand (string), a model (string), fabrication year (num
 Engine class will have the following fields: fuel type(string), power(number), fuel consumption(number)
 The application will implement bootstrap 3 framework
 
-1 - Create a new angular car app using angular cli (0.5p)
+1 - Create a new angular car app using angular cli (0.5p) --
 2 - Your app will have 3 pages -> home(dashboard), cars page and report page. 
-    Create the needed components and use routing to create navigation between them (1p)
-3 - Create the car class/model using typescript (0.5p)
-4 - Create the engine class/model using typescript (0.5p)
-5 - Create the components needed for listing a hardcoded list of cars, which you will have to create. (1p)
+    Create the needed components and use routing to create navigation between them (1p)--
+3 - Create the car class/model using typescript (0.5p) --
+4 - Create the engine class/model using typescript (0.5p) --
+5 - Create the components needed for listing a hardcoded list of cars, which you will have to create. (1p) --
 6 - Create a component to add a car in the previously hardcoded list using a service and angular forms (template or reactive, it is your choice) (1p)
-7 - Create a json server to store the cars (1p)
+7 - Create a json server to store the cars (1p) --
 8 - Replace the hardcoded list with the server using angulars HTTPClient (1p)
 9 - Implement the edit/delete functionalities for the car list (1p)
 10 - Implement validation for the forms -> 
