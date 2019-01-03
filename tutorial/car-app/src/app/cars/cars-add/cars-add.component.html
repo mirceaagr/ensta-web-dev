@@ -1,0 +1,53 @@
+<form autocomplete="off" #form="ngForm" (change)="debug(form)" (ngSubmit)="processForm(form.value)">
+  <fieldset>
+    <legend>Car Info</legend>
+    <div class="form-group col-md-6">
+        <input type="hidden" ngModel name="id">
+        <label for="brand">Brand:</label>
+        <input class="form-control" type="text" ngModel #brand="ngModel" id="brand" name="brand">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="model">Model:</label>
+        <input class="form-control" type="text" ngModel id="model" name="model">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="year">Year:</label>
+        <input class="form-control" type="number" ngModel id="year" name="year">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="price">Price:</label>
+        <input class="form-control" type="number" ngModel id="price" name="price">
+      </div>
+      <div class="form-group col-md-4">
+          <label for="km">Kilometers:</label>
+        <input class="form-control" type="number" ngModel id="km" name="km">
+      </div>
+  </fieldset>
+  <fieldset ngModelGroup="engine">
+    <legend>Engine Info</legend>
+    <div class="form-group col-md-12">
+      <label for="fuel">Fuel</label>
+      <select class="form-control" ngModel name="fuel" id="fuel">
+        <option value="">-- Empty --</option>
+        <option value="petrol">Petrol</option>
+        <option value="diesel">Diesel</option>
+        <option value="electric">Electric</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="power">Power:</label>
+        <input class="form-control" type="number" ngModel id="power" name="power">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="year">Consumption:</label>
+        <input class="form-control" type="number"  ngModel id="consumption" name="consumption">
+    </div>
+  </fieldset>
+
+  <div class="btn-group">
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-danger" type="reset">Reset</button>
+  </div>
+</form>
+
+{{ form.value | json }}

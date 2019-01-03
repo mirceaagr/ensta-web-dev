@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CarsComponent } from './cars/cars.component';
 import { ReportComponent } from './report/report.component';
+import { CarsAddComponent } from './cars/cars-add/cars-add.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     CarsComponent,
-    ReportComponent
+    ReportComponent,
+    CarsAddComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

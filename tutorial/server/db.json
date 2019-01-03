@@ -1,3 +1,30 @@
 {
-  "cars":[]
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Renault",
+      "model": "Clio",
+      "engine": {
+        "consumption": 4,
+        "fuel": "petrol",
+        "power": 100
+      },
+      "km": 100000,
+      "price": 7000,
+      "year": 2010
+    },
+    {
+      "id": 2,
+      "brand": "fdfsd",
+      "model": "sdfsdf",
+      "year": 4324,
+      "price": 23423,
+      "km": 234234,
+      "engine": {
+        "fuel": "petrol",
+        "power": 423,
+        "consumption": 2342
+      }
+    }
+  ]
 }
