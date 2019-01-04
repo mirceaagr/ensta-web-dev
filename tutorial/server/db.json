@@ -15,15 +15,28 @@
     },
     {
       "id": 2,
-      "brand": "fdfsd",
-      "model": "sdfsdf",
-      "year": 4324,
-      "price": 23423,
-      "km": 234234,
+      "brand": "Opel",
+      "model": "Astra",
+      "year": 2016,
+      "price": 20000666,
+      "km": 10000,
       "engine": {
-        "fuel": "petrol",
-        "power": 423,
-        "consumption": 2342
+        "fuel": "diesel",
+        "power": 80,
+        "consumption": 6
+      }
+    },
+    {
+      "id": 3,
+      "brand": "VW",
+      "model": "PASSAT",
+      "year": 2000,
+      "price": 500000,
+      "km": 122200,
+      "engine": {
+        "fuel": "diesel",
+        "power": 123,
+        "consumption": 5.5
       }
     }
   ]

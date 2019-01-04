@@ -8,4 +8,14 @@ export class Car {
     price: number;
     km: number;
     engine: Engine;
+
+    Car() {
+        this.id = null;
+        this.brand = '';
+        this.model = '';
+        this.year = null;
+        this.price = null;
+        this.km = null;
+        this.engine = new Engine();
+    }
 }

@@ -1,14 +1,40 @@
-<div class="container">
+<ng-template #noCars>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>Loading Cars...</h3>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<div class="container" *ngIf="cars; else noCars">
   <div class="row">
     <div class="col-md-7">
-      <ul class="list-group">
-        <li *ngFor="let car of cars" class="list-group-item">
-          {{car.brand}} - {{car.model}}
-        </li>
-      </ul>
+
+          <div *ngFor="let car of cars" class="panel panel-info">
+            <div class="panel-heading">
+              {{car.brand | titlecase}} - {{car.model | titlecase}}
+              <div class="pull-right">
+                <button class="btn btn-xs btn-warning" (click)="editCar(car.id)">Edit</button>
+                <button class="btn btn-xs btn-danger" (click)="deleteCar(car.id)">Delete</button>
+              </div>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <li>Kilometers: {{ car.km }}</li>
+                <li>Year: {{ car.year }}</li>
+                <li>Engine: {{ car.engine?.fuel}} / {{ car.engine?.power}} hp - {{ car.engine?.consumption}} l/100km</li>
+                <li>Price: {{ car.price | currency:'EUR' }}</li>
+              </ul>
+            </div>
+
+          </div>
+
+
     </div>
     <div class="col-md-5 well well-sm">
-      <app-cars-add></app-cars-add>
+      <app-cars-add (update)="getCars()" [selectedCar] = "selectedCar"></app-cars-add>
     </div>
   </div>
 </div>

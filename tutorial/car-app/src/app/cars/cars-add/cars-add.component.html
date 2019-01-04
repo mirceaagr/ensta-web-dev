@@ -1,53 +1,85 @@
-<form autocomplete="off" #form="ngForm" (change)="debug(form)" (ngSubmit)="processForm(form.value)">
+<form autocomplete="off" #form="ngForm" (change)="debug(form)" (ngSubmit)="processForm(form.value); form.reset()">
   <fieldset>
     <legend>Car Info</legend>
     <div class="form-group col-md-6">
-        <input type="hidden" ngModel name="id">
+        <input type="hidden" [(ngModel)] = "car.id" name="id" >
         <label for="brand">Brand:</label>
-        <input class="form-control" type="text" ngModel #brand="ngModel" id="brand" name="brand">
+        <input class="form-control" maxlength="50" required type="text" [(ngModel)] = "car.brand" #brand="ngModel" id="brand" name="brand">
+        <div *ngIf="brand.invalid && (brand.touched || brand.dirty)">
+          <p *ngIf="brand.errors.required" class="text-danger">Brand is required</p>
+          <p *ngIf="brand.errors.maxlength" class="text-danger">Max length is {{brand.errors.maxlength.requiredLength}} characters</p>
+        </div>
       </div>
       <div class="form-group col-md-6">
         <label for="model">Model:</label>
-        <input class="form-control" type="text" ngModel id="model" name="model">
+        <input class="form-control" maxlength="50" required type="text" [(ngModel)] = "car.model" id="model" #model="ngModel" name="model">
+        <div *ngIf="model.invalid && (model.touched || model.dirty)">
+            <p *ngIf="model.errors.required" class="text-danger">Model is required</p>
+            <p *ngIf="model.errors.maxlength" class="text-danger">Max length is {{brand.errors.maxlength.requiredLength}} characters</p>
+          </div>
       </div>
+      <div class="clearfix"></div>
       <div class="form-group col-md-4">
         <label for="year">Year:</label>
-        <input class="form-control" type="number" ngModel id="year" name="year">
+        <input class="form-control" required min="1900" type="number" [(ngModel)] = "car.year" id="year" name="year" #year="ngModel">
+        <div *ngIf="year.invalid && (year.touched || year.dirty)">
+            <p *ngIf="year.errors.required" class="text-danger">Year is required</p>
+            <p *ngIf="year.errors.min" class="text-danger">Year is is not valid</p>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label for="price">Price:</label>
-        <input class="form-control" type="number" ngModel id="price" name="price">
+        <input class="form-control" required type="number" [(ngModel)] = "car.price" id="price" name="price" #price="ngModel">
+        <div *ngIf="price.invalid && (price.touched || price.dirty)">
+            <p *ngIf="price.errors.required" class="text-danger">Price is required</p>
+        </div>
+
       </div>
       <div class="form-group col-md-4">
-          <label for="km">Kilometers:</label>
-        <input class="form-control" type="number" ngModel id="km" name="km">
+        <label for="km">Kilometers:</label>
+        <input class="form-control" required type="number" [(ngModel)] = "car.km" id="km" name="km" #km="ngModel">
+        <div *ngIf="km.invalid && (km.touched || km.dirty)">
+            <p *ngIf="km.errors.required" class="text-danger">Km is required</p>
+        </div>
       </div>
+      <div class="clearfix"></div>
   </fieldset>
   <fieldset ngModelGroup="engine">
     <legend>Engine Info</legend>
     <div class="form-group col-md-12">
       <label for="fuel">Fuel</label>
-      <select class="form-control" ngModel name="fuel" id="fuel">
+      <select class="form-control" required [(ngModel)] = "car.engine.fuel" name="fuel" id="fuel" #fuel="ngModel">
         <option value="">-- Empty --</option>
         <option value="petrol">Petrol</option>
         <option value="diesel">Diesel</option>
         <option value="electric">Electric</option>
       </select>
+      <div *ngIf="fuel.invalid && (fuel.touched || fuel.dirty)">
+          <p *ngIf="fuel.errors.required" class="text-danger">Fuel is required</p>
+      </div>
     </div>
     <div class="form-group col-md-6">
         <label for="power">Power:</label>
-        <input class="form-control" type="number" ngModel id="power" name="power">
-    </div>
+        <input class="form-control" max="100" min="0" required type="number" [(ngModel)] = "car.engine.power" id="power" name="power" #power="ngModel">
+        <div *ngIf="power.invalid && (power.touched || power.dirty)">
+            <p *ngIf="power.errors.required" class="text-danger">Power is required</p>
+            <p *ngIf="power.errors.max" class="text-danger">Max power should be 100hp</p>
+        </div>
+      </div>
     <div class="form-group col-md-6">
         <label for="year">Consumption:</label>
-        <input class="form-control" type="number"  ngModel id="consumption" name="consumption">
-    </div>
+        <input class="form-control" required type="number"  [(ngModel)] = "car.engine.consumption" id="consumption" name="consumption" #consumption="ngModel">
+        <div *ngIf="consumption.invalid && (consumption.touched || consumption.dirty)">
+            <p *ngIf="consumption.errors.required" class="text-danger">Consumption is required</p>
+        </div>
+      </div>
   </fieldset>
 
   <div class="btn-group">
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid">{{ isAddAction(car.id) ? 'Add Car':'Edit Car' }}</button>
     <button class="btn btn-danger" type="reset">Reset</button>
   </div>
 </form>
 
-{{ form.value | json }}
+{{ car | json }}
+
