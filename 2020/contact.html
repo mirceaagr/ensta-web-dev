@@ -39,7 +39,86 @@
          <main>
             <section>
 
-               
+               <!-- Our contact form 
+            
+                -name
+                -mail
+                -phone
+                -address
+                -message
+            -->
+
+            <form action="./index.php">
+                <label for="person">Person</label>
+                <input type="text" name="person" id="person">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+
+
+                <label for="pizza">Pizza:</label>    
+                <select name="pizza" id="pizza">
+                    <option value="pizza1">Pizza 1</option>
+                    <option value="pizza1">Pizza 2</option>
+
+                    <option value="pizza1">Pizza 4</option>
+
+                    <option value="pizza1">Pizza 5</option>
+
+                    <option value="pizza1">Pizza 6</option>
+
+
+
+                </select>
+                <label for="topping">Topping</label>
+                <input type="checkbox" name="topping" id="topping">
+
+                <label for="spicy">Spicy</label>
+                <input type="radio" name="spicy" value="yes">
+                <input type="radio" name="spicy" value="no">
+                <input type="radio" name="spicy" value="maybe">
+                <br>
+                <label for="phone">Phone:</label>
+                <input type="phone" name="phone" id="phone">
+                <br>
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address">
+                <br>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                <input type="submit" value="Order Pizza">
+            </form>
+
+            <!-- 
+
+                GET / POST / PUT/ PATCH / DELETE
+
+                Get Request
+                /pizzas => [Pizza]
+                /pizza/{id} => Pizza
+
+                Post Request
+                /pizzas => [Pizza]
+                
+                Put Request
+                /pizza/{id} => Pizza
+
+                Delete Request
+                /pizza/{id}
+
+                Patch Request
+                /pizza/{id} => <Partial of pizza>
+
+             -->
+            <form action="index.php" method="POST">
+                <input type="text" name="username">
+                <input type="password" name="password" >
+                <input type="submit" value="send me your password">
+
+            </form>
+
+
             </section>
             <aside>
                 <h5>Our schedule</h5>
