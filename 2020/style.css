@@ -22,12 +22,36 @@ nav a{
     text-align: center;
 }
 
+
 nav a:hover{
     background-color: coral;
 }
 
 /*Body Style*/
+main{
+    background-color:#e7e7e7;
+    padding:20px;
+    display:flex;
+}
 
+section{
+    flex:3;
+    display:flex;
+
+}
+
+article{
+    margin-right:20px;
+    flex:1
+}
+
+article img{
+    width:100%;
+}
+
+aside{
+    flex:1;
+}
 
 /* h1, h2{
     color:white;    
