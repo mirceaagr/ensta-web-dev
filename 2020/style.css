@@ -1,7 +1,6 @@
 /* Header style */
 
 header{
-    width:100%;
     text-align:center;
     padding:30px;
     background-color: brown; /*rgb(255,0,0) #ff0000*/ 
@@ -49,19 +48,38 @@ article img{
     width:100%;
 }
 
+.image-container{
+    width:100%;
+    height:400px;
+    overflow:hidden;
+}
+
+.price{
+    font-size:2em;
+    color:darkred;
+    margin-bottom:30px;
+}
+
+.cart-btn{
+    background-color: red;
+    color:white;
+    text-decoration: none;
+    font-size:1.2em;
+    padding:10px;
+}
+
 aside{
     flex:1;
+    padding:20px;
+    background-color:darkorange;
 }
 
-/* h1, h2{
-    color:white;    
-} */
+/* Footer */
 
-#id{
-
-}
-
-.class{
-
+footer{
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:30px;
 }
 
