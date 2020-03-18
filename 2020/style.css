@@ -1,0 +1,43 @@
+/* Header style */
+
+header{
+    width:100%;
+    text-align:center;
+    padding:30px;
+    background-color: brown; /*rgb(255,0,0) #ff0000*/ 
+    color:white  
+}
+
+nav{
+    background-color: black;
+    display:flex;
+}
+
+nav a{
+    background-color: chocolate;
+    flex:1;
+    text-decoration: none;
+    color:white;
+    padding:20px;
+    text-align: center;
+}
+
+nav a:hover{
+    background-color: coral;
+}
+
+/*Body Style*/
+
+
+/* h1, h2{
+    color:white;    
+} */
+
+#id{
+
+}
+
+.class{
+
+}
+
