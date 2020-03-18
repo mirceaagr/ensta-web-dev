@@ -1,0 +1,14 @@
+#Assignment
+
+- Create a 4 page pizza place website, design is up to you
+	- homepage -> listing some products, add call to action section (like order now), anything creative
+	- about page -> use some of the tags we learned to display some info about the pizza place -> owner, history etc
+	- pizzas page -> make a table with pizza, ingredients and prices
+	- contact page -> add a contact form and an order form
+	- pages must be linked to each other -> navigation has to be functional.
+- Use external stylesheet (style.css)
+- Use semantic tags
+- Collaborate on slack, ask me or the awesome colleagues that already did websites before.
+- Have fun!
+
+
