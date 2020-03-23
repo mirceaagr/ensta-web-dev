@@ -58,13 +58,62 @@
             // console.log(typeof amountOfJSInStudentHead);
             // console.log(typeof willHeLearnJs);
 
-            console.log("Student " + student + " Age" + studentAge + " Grade " + studentGrade)
-            console.log(10 + "5");
-            console.log("10" + 5);
-            console.log("10" - 5);  
+            // console.log("Student " + student + " Age" + studentAge + " Grade " + studentGrade)
+            // console.log(10 + "5");
+            // console.log("10" + 5);
+            // console.log("10" - 5);  
 
-            console.log(`Student: ${student} Age: ${studentAge} Grade: ${studentGrade}`)
+            // console.log(`Student: ${student} Age: ${studentAge} Grade: ${studentGrade}`)
             
+            // console.dir(String);
+            // console.log(student.split(""));
+            // console.log(student.substr(0, 1));
+            // console.log(student.toUpperCase());
+
+            function gradePaper(student = "Tom") {
+                let grade = Math.random() * 20; 
+                let recommendedGrade = grade > 10 ? 5: 11;
+
+
+                console.log("Initial grade", grade)
+                console.log("Recommended Grade", recommendedGrade)
+                let message = "";
+                let extraMessage = "";
+
+                switch(student) {
+                    case "Tom":
+                        grade = grade - 5
+                        break;
+                    case "Quentin":
+                        grade = 1
+                        break;
+                    case "Laetitia":
+                        grade++;
+                        break;
+                    default:
+                        grade--;    
+
+                }
+                
+
+                if(grade > 10){
+                    message = "GJ you passed";
+                }else{
+                    message = "To bad";
+                }
+                return `${student} -> ${grade.toFixed()} -> ${message}`;
+            }    
+
+            console.log(gradePaper('Quentin'));
+            console.log(gradePaper());
+
+            const gradePaperArrow = (student) => console.log(gradePaper(student));
+            
+            gradePaperArrow("Laetitia");
+
+
+
+
             
 
 
