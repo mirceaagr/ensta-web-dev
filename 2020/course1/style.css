@@ -2,8 +2,11 @@
 
 header{
     text-align:center;
-    padding:30px;
+    padding:60px;
     background-color: brown; /*rgb(255,0,0) #ff0000*/ 
+    background-image:url('https://st4.depositphotos.com/1000230/22517/i/1600/depositphotos_225174300-stock-photo-pizza-mozzarella-cheese-salmon-fish.jpg');
+    background-position: center;
+    background-size: cover;
     color:white  
 }
 
@@ -81,5 +84,33 @@ footer{
     color:white;
     text-align:center;
     padding:30px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.green{
+    color:green;
+}
+
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+    }
+    main{
+        flex-direction:column-reverse;
+    }
+    aside{
+        margin-bottom:20px;
+    }
+    section{
+        flex-direction:column;
+    }
+    article{
+        margin-right:0px!important;
+        margin-bottom:20px;
+    }
+
 }
 
