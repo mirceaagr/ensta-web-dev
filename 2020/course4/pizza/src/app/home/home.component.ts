@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { StoreService } from '../store.service';
+import { CarouselItem } from '../models/CarouselItem';
+import { Product } from '../models/Product';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +12,14 @@ export class HomeComponent implements OnInit {
 
   test = "This comes from a variable";
   pizzaPercentage = 0;  
-  constructor() {
+  carouselItems: CarouselItem[];
+  pizzas:Product[];
+
+  // we use DI to inject Store Service
+  constructor(private store:StoreService) {
+
+    this.pizzas = store.products;
+    this.carouselItems = store.carouselItems;
     setTimeout( () => {
       this.test = "This value changed"
     }, 2000)
