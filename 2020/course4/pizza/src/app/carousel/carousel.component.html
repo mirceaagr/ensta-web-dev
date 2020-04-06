@@ -1,1 +1,33 @@
-<p>carousel works!</p>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+       
+        <li *ngFor="let item of items; let first = first; let index = index"
+            attr.data-target="#{{item.id}}" attr.data-slide-to="{{index}}" [class]="{'active':first}">
+        </li>
+       
+      </ol>
+
+      <div class="carousel-inner">
+
+        <div *ngFor="let item of items; let first = first" [class]="{'carousel-item':true, 'active':first}">
+          <img src="{{item.url}}" class="d-block w-100" alt="{{item.title}}">
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <h1>{{item.title}}</h1>
+              <p>{{item.caption}}</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Order up today</a></p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> 
