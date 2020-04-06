@@ -47,28 +47,13 @@
         <span class="sr-only">Next</span>
       </a>
     </div>     
+    <app-alert message="Alert1" alertType="info" icon="fa fa-home"></app-alert>
+    <app-alert message="Alert2" alertType="warning"  icon="fa fa-home"></app-alert>
+    <app-alert message="Alert3" alertType="danger"  icon="fa fa-question-mark"></app-alert>
+    <app-alert message="Alert4" alertType="info"></app-alert>
+    <app-alert [message]="test" alertType="warning" ></app-alert>
 
-
-    <div class="alert alert-danger" role="alert">
-      <i class="fas fa-exclamation-circle"></i> Watch out for the virus!
-    </div> 
-
-
-    <div class="container well well-sm text-center mb-4">
-      <h2>Your pizza status</h2>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr class="my-4">
-      <p>Your pizza is baking. Here's the progress of the pizza</p>
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-      </div>
-      <hr class="my-4">
-       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-        Click here to order via modal
-      </button>
-  
-    </div>
+    <app-progress [percentage]="pizzaPercentage"></app-progress>
    
 
   

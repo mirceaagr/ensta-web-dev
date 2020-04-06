@@ -9,6 +9,9 @@ import { PizzasComponent } from './pizzas/pizzas.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AlertComponent } from './alert/alert.component';
+import { ProgressComponent } from './progress/progress.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { FooterComponent } from './footer/footer.component';
     PizzasComponent,
     ContactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AlertComponent,
+    ProgressComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
