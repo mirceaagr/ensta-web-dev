@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AlertComponent } from './alert/alert.component';
 import { ProgressComponent } from './progress/progress.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     FooterComponent,
     AlertComponent,
     ProgressComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
