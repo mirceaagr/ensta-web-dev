@@ -8,7 +8,7 @@
           <div class="btn-group">
             <a class="btn btn-sm btn-outline-secondary" [routerLink]="['pizza', product.id]">View</a>
           </div>
-          <small class="text-muted">{{product.price}}</small>
+          <small class="text-muted">{{product.price | currency:"EUR"}}</small>
         </div>
       </div>
     </div>

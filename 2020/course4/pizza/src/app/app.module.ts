@@ -14,6 +14,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
 import { PizzaDetailComponent } from './pizzas/pizza-detail/pizza-detail.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PizzaDetailComponent } from './pizzas/pizza-detail/pizza-detail.compone
     ProgressComponent,
     CarouselComponent,
     ProductComponent,
-    PizzaDetailComponent
+    PizzaDetailComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

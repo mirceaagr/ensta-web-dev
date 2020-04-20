@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CarouselItem } from './models/CarouselItem';
 import { Product } from './models/Product';
+import { Cart } from './models/Cart';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,11 @@ import { Product } from './models/Product';
 export class StoreService {
   carouselItems: CarouselItem[];
   products: Product[];
+  cart: Cart;
 
   constructor() { 
+  
+    this.cart = new Cart([]);
 
     this.products = [
       {
