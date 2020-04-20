@@ -7,6 +7,8 @@
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
             <a class="btn btn-sm btn-outline-secondary" [routerLink]="['pizza', product.id]">View</a>
+            <a class="btn btn-sm btn-info" (click)="addToCart()"><i class="fas fa-cart-plus text-white"></i></a>
+
           </div>
           <small class="text-muted">{{product.price | currency:"EUR"}}</small>
         </div>

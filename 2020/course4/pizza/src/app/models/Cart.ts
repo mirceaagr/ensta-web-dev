@@ -22,6 +22,7 @@ export class Cart{
         products: CartProduct[]
     ) {
         this._products = products;
+        this.calculateCart();
     }
 
     public addToCart(product: Product){
