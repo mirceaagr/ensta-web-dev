@@ -13,32 +13,32 @@ export class StoreService {
 
     this.products = [
       {
-        id:0,
+        id:1,
         description: "Pizza margueritate",
         image:"https://picsum.photos/id/237/600/400",
         name: "First Product",
         price: 10
       },
       {
-        id:0,
+        id:2,
         description: "Pizza hawayan",
         image:"https://picsum.photos/id/265/600/400",
-        name: "First Product",
-        price: 10
+        name: "Second Product",
+        price: 11
       },
       {
-        id:0,
+        id:3,
         description: "Pizza pesci",
         image:"https://picsum.photos/id/254/600/400",
-        name: "First Product",
-        price: 10
+        name: "Third Product",
+        price: 12
       },
       {
-        id:0,
+        id:4,
         description: "Pizza prosciutto",
         image:"https://picsum.photos/id/234/600/400",
-        name: "First Product",
-        price: 10
+        name: "Fourth Product",
+        price: 13
       }
 
     ];
@@ -64,5 +64,12 @@ export class StoreService {
       },
     ]
 
+  }
+
+  getProduct(id:number):Product {
+    const prod : Product = this.products.find((p:Product)=>{
+        return p.id === id
+    })
+    return prod;
   }
 }

@@ -13,6 +13,7 @@ import { AlertComponent } from './alert/alert.component';
 import { ProgressComponent } from './progress/progress.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
+import { PizzaDetailComponent } from './pizzas/pizza-detail/pizza-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProductComponent } from './product/product.component';
     AlertComponent,
     ProgressComponent,
     CarouselComponent,
-    ProductComponent
+    ProductComponent,
+    PizzaDetailComponent
   ],
   imports: [
     BrowserModule,

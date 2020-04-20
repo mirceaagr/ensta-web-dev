@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>{{pizza.name}}</h1>
+            <p>
+                <img src="{{pizza.image}}">
+                
+            </p>
+            <p>
+                Description: {{pizza.description}}
+            </p>
+            <p>
+                Price: <strong>{{pizza.price | currency:"EUR"}}</strong>
+
+            </p>
+        </div>
+        <div class="col-md-3">
+
+
+                <!-- Show the cart later -->
+
+        </div>
+    </div>
+</div>
