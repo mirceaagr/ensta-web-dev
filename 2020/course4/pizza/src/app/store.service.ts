@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { CarouselItem } from './models/CarouselItem';
 import { Product } from './models/Product';
 import { Cart } from './models/Cart';
+import { isNullOrUndefined } from 'util';
 
 @Injectable({
   providedIn: 'root'
@@ -12,61 +13,18 @@ export class StoreService {
   cart: Cart;
 
   constructor() { 
-  
-    this.cart = new Cart([]);
+    const persistentCart = JSON.parse(localStorage.getItem('cart'));
+    console.log(persistentCart);
 
-    this.products = [
-      {
-        id:1,
-        description: "Pizza margueritate",
-        image:"https://picsum.photos/id/237/600/400",
-        name: "First Product",
-        price: 10
-      },
-      {
-        id:2,
-        description: "Pizza hawayan",
-        image:"https://picsum.photos/id/265/600/400",
-        name: "Second Product",
-        price: 11
-      },
-      {
-        id:3,
-        description: "Pizza pesci",
-        image:"https://picsum.photos/id/254/600/400",
-        name: "Third Product",
-        price: 12
-      },
-      {
-        id:4,
-        description: "Pizza prosciutto",
-        image:"https://picsum.photos/id/234/600/400",
-        name: "Fourth Product",
-        price: 13
-      }
+    if(!isNullOrUndefined(persistentCart) &&  !isNullOrUndefined(persistentCart._products)) {
+      this.cart = new Cart(persistentCart._products);
+    } else {
+      this.cart = new Cart([]);
+    }
 
-    ];
+    this.products = []
 
-    this.carouselItems = [
-      {
-        id:0,
-        caption:"My first caption",
-        title: "My first title",
-        url: "https://picsum.photos/id/237/1200/400"
-      },
-      {
-        id:1,
-        caption:"My second caption",
-        title: "My second title",
-        url: "https://picsum.photos/id/238/1200/400"
-      },
-      {
-        id:2,
-        caption:"My third caption",
-        title: "My third title",
-        url: "https://picsum.photos/id/239/1200/400"
-      },
-    ]
+    this.carouselItems = []
 
   }
 

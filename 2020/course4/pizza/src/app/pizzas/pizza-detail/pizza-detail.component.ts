@@ -30,4 +30,8 @@ export class PizzaDetailComponent implements OnInit {
     this.pizza = this.store.getProduct(this.id);  
   }
 
+  addToCart() {
+    this.store.cart.addToCart(this.pizza);
+  }
+
 }

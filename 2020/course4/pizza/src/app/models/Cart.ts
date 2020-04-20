@@ -71,10 +71,15 @@ export class Cart{
     }
 
     public decrement(index: number){
+        if(this._products[index].quantity === 1) {
+            return this.deleteFromCart(index);
+        }
+        
         const prod = this.products[index];
         // @TODO check for null values.. check for quanties.active
         prod.quantity--;
         this._products[index] = {...prod}
+        
         this.calculateCart();
     }
 
@@ -83,5 +88,10 @@ export class Cart{
         this.products.forEach((p:CartProduct)=>{
             this._total += p.quantity * p.price;
         })
+        this.storeCart();
+    }
+
+    private storeCart() {
+        localStorage.setItem('cart', JSON.stringify(this));
     }
 }

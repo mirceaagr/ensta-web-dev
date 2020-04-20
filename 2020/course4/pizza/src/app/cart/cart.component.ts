@@ -15,4 +15,16 @@ export class CartComponent implements OnInit {
     this.cart = this.store.cart
   }
 
+  incQuant(index){
+    this.store.cart.increment(index);
+  }
+
+  decQuant(index){
+    this.store.cart.decrement(index);
+  }
+
+  delFromCart(index){
+    this.store.cart.deleteFromCart(index);
+  }
+
 }

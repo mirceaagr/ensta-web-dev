@@ -15,6 +15,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
 import { PizzaDetailComponent } from './pizzas/pizza-detail/pizza-detail.component';
 import { CartComponent } from './cart/cart.component';
+import { SmallCartComponent } from './cart/small-cart/small-cart.component';
+import { PizzaPipe } from './pipes/pizza.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CartComponent } from './cart/cart.component';
     CarouselComponent,
     ProductComponent,
     PizzaDetailComponent,
-    CartComponent
+    CartComponent,
+    SmallCartComponent,
+    PizzaPipe
   ],
   imports: [
     BrowserModule,
