@@ -27,6 +27,13 @@
           "image":"https://picsum.photos/id/234/600/400",
           "name": "Fourth Product",
           "price": 13
+        },
+        {
+          "id":5,
+          "description": "Pizza gusti",
+          "image":"https://picsum.photos/id/244/600/400",
+          "name": "Fifth Product",
+          "price": 13
         }
   
       ],
@@ -49,6 +56,16 @@
           "caption":"My third caption",
           "title": "My third title",
           "url": "https://picsum.photos/id/239/1200/400"
+        }
+      ],
+
+
+      "languages":{
+        "french" : {
+          "salutation":"Bonjour"
         },
-      ]
+        "english":{
+          "salutation":"Hello"
+        }
+    }
 }

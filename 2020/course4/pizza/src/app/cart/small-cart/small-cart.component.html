@@ -4,7 +4,7 @@
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
       <a *ngFor="let product of cart.products" class="dropdown-item" 
-      [routerLink]="['pizza', product.id]">{{product | pizza:false:false}}</a>
+      [routerLink]="['pizza', product.id]">{{product}}</a>
 
     </div>
   </li>

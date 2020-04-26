@@ -37,6 +37,17 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.store.fetchProducts()
+    .subscribe((products:Product[])=>{
+      this.store.products = products;
+      this.pizzas = products;
+    })
+
+    this.store.fetchCarousels()
+    .subscribe((carousels:CarouselItem[])=>{
+      this.store.carouselItems = carousels;
+      this.carouselItems = carousels;
+    })
     
 
   }

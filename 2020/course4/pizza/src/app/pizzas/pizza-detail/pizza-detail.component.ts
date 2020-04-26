@@ -27,7 +27,10 @@ export class PizzaDetailComponent implements OnInit {
         this.id = parseInt(params.get("id"));
       })
 
-    this.pizza = this.store.getProduct(this.id);  
+    this.store.getProduct(this.id)
+      .subscribe((products:Product[])=>{
+        this.pizza = products[0];
+      });  
   }
 
   addToCart() {
