@@ -10,9 +10,19 @@
             <a class="btn btn-sm btn-info" (click)="addToCart()"><i class="fas fa-cart-plus text-white"></i></a>
 
           </div>
-          <small class="text-muted">{{product.price | currency:"EUR"}}</small>
+          
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between">
+          <span *ngIf="product.sale; else normalPrice" class="badge badge-danger"><i class="fas fa-tag"></i> Sale</span>
+          <span *ngIf="product.price <= 10" class="badge badge-warning">Best Value</span>
+          <small class="text-info">{{product.price | currency:"EUR"}}</small>
         </div>
       </div>
     </div>
+
+    <ng-template #normalPrice>
+      <span class="badge badge-info"><i class="fas fa-money-bill"></i> Price</span>
+    </ng-template>
 
   <!-- /product -->

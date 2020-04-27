@@ -7,24 +7,29 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-            <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" routerLink="">{{translations?.home}} <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="about" >About Us</a>
+            <a class="nav-link" routerLink="about" >{{translations?.about}}</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" routerLink="pizzas">Our Pizzas</a>
+              <a class="nav-link" routerLink="pizzas">{{translations?.pizzas}}</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" routerLink="contact">Contact Us</a>
+              <a class="nav-link" routerLink="contact">{{translations?.contact}}</a>
             </li>
-            <app-small-cart></app-small-cart>
+            
 
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i>  Search</button>
-        </form>
+       
+        <ul class="nav navbar-nav navbar-right">
+          <app-small-cart></app-small-cart>
+          <div class="btn-group">
+            <button [class]="{'btn':true, 'btn-info':true, 'btn-warning':language==='fr'}" (click)="changeLang('fr')">FR</button>
+            <button [class]="{'btn':true, 'btn-info':true, 'btn-warning':language==='en'}" (click)="changeLang('en')">EN</button>   
+          </div>
+         
+        </ul>
         </div>
     </nav>
     </header>

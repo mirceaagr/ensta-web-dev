@@ -5,6 +5,7 @@ import { Cart } from './models/Cart';
 import { isNullOrUndefined } from 'util';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { SERVER_URL } from './constants';
 
 @Injectable({
   providedIn: 'root'
@@ -34,14 +35,14 @@ export class StoreService {
     //     return p.id === id
     // })
 
-    return this.http.get("http://localhost:3000/products/?id="+id);
+    return this.http.get(`${SERVER_URL}products?id=${id}`);
   }
 
   fetchProducts(): Observable<any> {
-    return this.http.get("http://localhost:3000/products")
+    return this.http.get(`${SERVER_URL}products`)
   }
 
   fetchCarousels(): Observable<any> {
-    return this.http.get("http://localhost:3000/carousels")
+    return this.http.get(`${SERVER_URL}carousels`)
   }
 }

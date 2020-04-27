@@ -11,7 +11,7 @@
             </p>
             <p>
                 Price: <strong>{{pizza.price | currency:"EUR"}}</strong>
-
+                <span *ngIf="pizza.sale" class="badge badge-warning"><i class="fas fa-tag"></i> Sale</span>
             </p>
             <p>
                 <a class="btn btn-sm btn-info text-white"

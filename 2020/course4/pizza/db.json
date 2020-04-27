@@ -5,35 +5,43 @@
           "description": "Pizza margueritate",
           "image":"https://picsum.photos/id/237/600/400",
           "name": "First Product",
-          "price": 10
+          "price": 10,
+          "sale":true
         },
         {
           "id":2,
           "description": "Pizza hawayan",
           "image":"https://picsum.photos/id/265/600/400",
           "name": "Second Product",
-          "price": 11
+          "price": 11,
+          "sale":false
         },
         {
           "id":3,
           "description": "Pizza pesci",
           "image":"https://picsum.photos/id/254/600/400",
           "name": "Third Product",
-          "price": 12
+          "price": 12,
+          "sale":false
+
+          
         },
         {
           "id":4,
           "description": "Pizza prosciutto",
           "image":"https://picsum.photos/id/234/600/400",
           "name": "Fourth Product",
-          "price": 13
+          "price": 13,
+          "sale":true
         },
         {
           "id":5,
           "description": "Pizza gusti",
           "image":"https://picsum.photos/id/244/600/400",
           "name": "Fifth Product",
-          "price": 13
+          "price": 13,
+          "sale":false
+
         }
   
       ],
@@ -57,15 +65,5 @@
           "title": "My third title",
           "url": "https://picsum.photos/id/239/1200/400"
         }
-      ],
-
-
-      "languages":{
-        "french" : {
-          "salutation":"Bonjour"
-        },
-        "english":{
-          "salutation":"Hello"
-        }
-    }
+      ]
 }
