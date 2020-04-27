@@ -19,7 +19,9 @@ import { CartComponent } from './cart/cart.component';
 import { SmallCartComponent } from './cart/small-cart/small-cart.component';
 import { PizzaPipe } from './pipes/pizza.pipe';
 import { LoginComponent } from './login/login.component';
-import {FormsModule } from '@angular/forms'
+import {FormsModule } from '@angular/forms';
+import { PizzaListComponent } from './pizza-list/pizza-list.component';
+import { PizzaAddComponent } from './pizza-add/pizza-add.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import {FormsModule } from '@angular/forms'
     CartComponent,
     SmallCartComponent,
     PizzaPipe,
-    LoginComponent
+    LoginComponent,
+    PizzaListComponent,
+    PizzaAddComponent
   ],
   imports: [
     BrowserModule,

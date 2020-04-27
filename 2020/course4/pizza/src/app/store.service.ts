@@ -48,4 +48,8 @@ export class StoreService {
   fetchCarousels(): Observable<any> {
     return this.http.get(`${SERVER_URL}carousels`)
   }
+
+  postProduct(product:Product): any {
+    return this.http.post(`${SERVER_URL}products`, product)
+  }
 }

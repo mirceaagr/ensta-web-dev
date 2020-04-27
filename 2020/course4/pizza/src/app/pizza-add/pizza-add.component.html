@@ -1,0 +1,74 @@
+<div *ngIf="productForm.submitted" class="alert alert-info">
+    Form submited
+</div>
+
+<form #productForm = "ngForm" (ngSubmit)="processForm(productForm)">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" type="text" name="name" 
+        #name="ngModel"
+        required
+        ngModel>
+        <div *ngIf="name.invalid && (name.touched || name.dirty)">
+            <div *ngIf="name.errors.required" class="alert alert-danger">
+                Name is required
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Description</label>
+        <textarea  class="form-control" name="description" id="" cols="30" rows="10" 
+        #description = "ngModel"
+        required
+        ngModel></textarea>
+        <div *ngIf="description.invalid && (description.touched || description.dirty)">
+            <div *ngIf="description.errors.required" class="alert alert-danger">
+                Description is required
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for=""> Price</label>
+        <input class="form-control" type="number" name="price" 
+        #price = "ngModel"
+        required
+        max=30
+        ngModel>
+        <div *ngIf="price.invalid && (price.touched || price.dirty)">
+            <div *ngIf="price.errors.required" class="alert alert-danger">
+                Price is required
+            </div>
+            <div *ngIf="price.errors.max" class="alert alert-danger">
+                Price is to high
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for=""> Image</label>
+        <input  class="form-control" type="text" name="image" 
+        #image = "ngModel"
+        required
+        ngModel>
+        <div *ngIf="image.invalid && (image.touched || image.dirty)">
+            <div *ngIf="image.errors.required" class="alert alert-danger">
+                Image is required
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Sale</label>
+        <select class="form-control" name="sale" id="" 
+        #sale = "ngModel"
+        required
+        ngModel>
+            <option [value]="true">YES</option>
+            <option [value]="false">NO</option>
+        </select>
+        <div *ngIf="sale.invalid && (sale.touched || sale.dirty)">
+            <div *ngIf="sale.errors.required" class="alert alert-danger">
+               Sale is required
+            </div>
+        </div>
+    </div> 
+    <button type="submit" [disabled]="productForm.invalid">Submit</button> 
+</form>

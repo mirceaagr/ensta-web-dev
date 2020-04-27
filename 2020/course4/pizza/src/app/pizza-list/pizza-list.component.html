@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                    <th>Sale</th>
+                </tr>
+                <tr *ngFor="let product of products">
+                    <td>{{product.name}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.image}}</td>
+                    <td>{{product.sale}}</td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="col-md-4">
+            <app-pizza-add (productUpdate)="fetchProducts()"></app-pizza-add>
+        </div>
+    </div>
+
+</div>
