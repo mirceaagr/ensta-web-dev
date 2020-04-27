@@ -21,6 +21,9 @@ export class StoreService {
 
     if(!isNullOrUndefined(persistentCart) &&  !isNullOrUndefined(persistentCart._products)) {
       this.cart = new Cart(persistentCart._products);
+      this.cart.promoCode = persistentCart.promotCode;
+      this.cart.discount = persistentCart.discount;
+      this.cart.calculateCart();
     } else {
       this.cart = new Cart([]);
     }

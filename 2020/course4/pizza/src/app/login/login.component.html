@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="col-md-4 offset-4">
+        <h3>Login</h3>
+
+        <div class="alert alert-success" *ngIf="loginForm.submitted">
+            Form has been submited
+        </div>
+        <form #loginForm = "ngForm" (ngSubmit)="processForm(loginForm)">
+            <!-- username -->
+            <!-- role -->
+            <!-- password -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input 
+                [(ngModel)]="user.username" 
+                class="form-control" 
+                type="email" 
+                name="username"
+                id="username" 
+                (change)="debug(username)"
+                #username = "ngModel"
+                required
+                email                
+                >
+                
+                <div *ngIf="username.invalid && (username.touched || username.dirty)">
+                    <div *ngIf="username.errors.required" class="alert alert-danger">
+                        Username is required.
+                    </div>
+                    <div *ngIf="username.errors.email" class="alert alert-danger">
+                        Username has to be an email
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="">Role</label>
+                <select 
+                    [(ngModel)]="user.role" 
+                    class="form-control" 
+                    name="role" 
+                    id="role" 
+                    #role = "ngModel"
+                    required
+                    >
+                    <option *ngFor="let role of roles" [value]="role.value">{{role.label}}</option>
+                </select>
+                <div *ngIf="role.invalid && (role.touched || role.dirty)">
+                    <div *ngIf="role.errors.required" class="alert alert-danger">
+                        Role is required.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                [(ngModel)]="user.password" 
+                class="form-control" 
+                type="password" 
+                name="password" 
+                id="password" 
+                #password = "ngModel"
+                minlength="6"
+                required>
+                <div *ngIf="password.invalid && (password.touched || password.dirty)">
+                    <div *ngIf="password.errors.required" class="alert alert-danger">
+                        Password is required.
+                    </div>
+                    <div *ngIf="password.errors.minlength" class="alert alert-danger">
+                        You need to type {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} chars
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Submit</button>
+            <button type="reset" class="btn btn-warning">Reset Form</button>
+        </form> 
+    </div>
+</div>
+
+{{user | json}}
+
+
+
+
+

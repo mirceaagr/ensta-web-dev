@@ -1,9 +1,12 @@
 import { Product } from './Product';
 import { CartProduct } from './CartProduct';
+import { isNullOrUndefined } from 'util';
 
 export class Cart{
 
     private _products: CartProduct[];
+    promoCode: string = "";
+    discount: number = 0; // percent
     // cart.products
     get products(): CartProduct[] {
         return this._products;
@@ -88,10 +91,27 @@ export class Cart{
         this.products.forEach((p:CartProduct)=>{
             this._total += p.quantity * p.price;
         })
+        this._total -= this._total * this.discount / 100;
         this.storeCart();
     }
 
     private storeCart() {
         localStorage.setItem('cart', JSON.stringify(this));
+    }
+
+    private _avPromos = new Map([
+        ["PROMO5", 5],
+        ["PROMO10", 10]
+    ])
+
+    public setPromo(promo:string):boolean {
+        let discCode = this._avPromos.get(promo);
+        if(!isNullOrUndefined(discCode)) {
+            this.promoCode = promo;
+            this.discount = discCode;
+            this.calculateCart();
+            return true;
+        }
+        return false;
     }
 }

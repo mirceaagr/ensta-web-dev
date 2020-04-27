@@ -24,6 +24,9 @@
        
         <ul class="nav navbar-nav navbar-right">
           <app-small-cart></app-small-cart>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="login">Login</a>
+          </li>
           <div class="btn-group">
             <button [class]="{'btn':true, 'btn-info':true, 'btn-warning':language==='fr'}" (click)="changeLang('fr')">FR</button>
             <button [class]="{'btn':true, 'btn-info':true, 'btn-warning':language==='en'}" (click)="changeLang('en')">EN</button>   
