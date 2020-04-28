@@ -28,3 +28,7 @@
 
 --------------------------------------------------------------------
 
+#   Course 6
+*   Angular P3
+*   https://www.youtube.com/watch?v=Dcaqlx3kywo
+
