@@ -8,8 +8,14 @@ export interface IMenuLangSet{
     contact:string
 }
 
+export interface IFooterLangSet{
+    str1:string,
+    str2:string
+}
+
 export interface ILangSet{
     "menu":IMenuLangSet
+    "footer":IFooterLangSet
 }
 
 export interface ILang{
@@ -27,6 +33,10 @@ export const LANGS:ILang = {
             pizzas:"Our Pizzas",
             cart:"Shopping Cart",
             contact:"Contact Us"
+        },
+        "footer":{
+            str1:"String one",
+            str2:"String two",
         }
     },
     "fr":{
@@ -36,6 +46,10 @@ export const LANGS:ILang = {
             pizzas:"Nos pizzas",
             cart:"Panier",
             contact:"Contactez"
+        },
+        "footer":{
+            str1:"Premiere String",
+            str2:"Seconde String"
         }
     }
 }
