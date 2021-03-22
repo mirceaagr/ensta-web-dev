@@ -1,0 +1,138 @@
+body{
+  
+}
+
+/* all headers and links will use Audiowide font */
+h1,h2,h3,h4, a{
+  font-family: Audiowide, sans-serif;
+}
+
+p{
+  /* we are specifying fallback fonts in case we don't have that font available */
+  font-family: Arial, Helvetica, sans-serif
+}
+
+/* header styles */
+header {
+  display: flex;
+  flex-direction: column;
+  height: 25vh;
+  align-items: center;
+  background-color: darkred;
+  color: white;
+  text-align: center;
+  background-image:url("https://images.all-free-download.com/images/graphiclarge/abstract_music_background_311570.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+header h1, header h2 {
+  flex: 1;
+  text-shadow: 0px 0px 3px black;
+}
+
+/* navigation */
+nav {
+  display: flex;
+}
+nav a {
+  padding: 20px;
+  text-decoration: none;
+}
+
+/* when screen is less then 500px we are using these css properties */
+@media (max-width: 500px) {
+  nav, main, #articles {
+    flex-direction: column;
+  }
+  aside, article{
+    margin-right:0px !important;
+  }
+}
+
+nav a:hover {
+  background-color: red !important;
+}
+
+nav a {
+  flex: 1;
+  background-color: black;
+  color: white;
+  text-align:center
+}
+
+nav a:first-child{
+  background-color:chartreuse
+}
+nav a:nth-child(2){
+  background-color:gold
+}
+nav a:nth-child(3){
+  background-color:pink
+}
+nav a:last-child{
+  background-color:powderblue
+}
+
+main {
+  background-color: lightgray;
+  padding: 20px;
+  display: flex;
+}
+
+aside {
+  flex: 1;
+  border-radius:5px;
+}
+
+/* articles */
+#articles {
+  flex: 4;
+  display: flex;
+}
+
+article {
+  flex: 1;
+  margin-right:20px;
+  text-align:center
+}
+
+article img{
+  border-radius:100px;
+  border: 2px dashed white
+}
+
+article a{
+  padding:5px;
+  color:white;
+  text-decoration:none;
+  background-color: brown;
+  border-radius:5px;
+  margin:20px;
+  border:1px solid white;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color:darkgray;
+  padding:20px 0;
+  font-family: Audiowide;
+}
+
+aside{
+  background-color:white;
+  padding:20px;
+  margin-right:20px;
+}
+
+aside ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+aside ul li{
+  padding: 10px 0px;
+  border-bottom: 1px dotted gray;
+}
