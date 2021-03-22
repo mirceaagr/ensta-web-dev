@@ -1,0 +1,55 @@
+header{
+    display:flex;
+    height:20vh;
+    align-items: center;
+    background-color: darkred;
+    color:white;
+    text-align:center;
+}
+
+header h1{
+    flex:1;
+}
+
+nav{
+   display:flex; 
+}
+nav a{
+    padding:20px;
+    text-decoration:none
+}
+
+@media (max-width: 500px) { 
+    nav{
+        flex-direction:column
+    }
+ }
+
+nav a:hover{
+    background-color:red;
+}
+
+nav a{
+    flex:1;
+    background-color: black;
+    color:white
+}
+
+main{
+    background-color:lightgray;
+    padding:20px;
+    display:flex;
+}
+
+aside{
+    flex:1;
+}
+
+#articles{
+    flex:1;
+    display:flex;
+}
+
+article {
+    flex:1
+}
