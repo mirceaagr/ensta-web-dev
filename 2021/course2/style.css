@@ -1,3 +1,10 @@
 main{
     margin-top:56px;
 }
+
+#features{
+    background-image: url('https://picsum.photos/600/500/?blur');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
