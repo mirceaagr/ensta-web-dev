@@ -1,0 +1,11 @@
+/* fix for body going under navbar */
+
+body{
+    margin-top:55px;
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 35px;
+  }

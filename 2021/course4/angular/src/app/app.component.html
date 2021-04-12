@@ -1,0 +1,25 @@
+
+    <h1>Billing website</h1>
+
+    <app-mybutton (increment)="increment()" [personName] = "persons[0]"></app-mybutton>
+    <app-mybutton (increment)="increment()" [personName] = "persons[1]"></app-mybutton>
+    <app-mybutton (increment)="increment()" [personName] = "persons[2]"></app-mybutton>
+    <app-mybutton (increment)="increment()" [personName] = "persons[3]"></app-mybutton>
+
+    <hr>
+
+    <app-mybutton
+      *ngFor="let person of persons"
+      [personName] = "person"
+      (increment)="increment()"
+      >
+
+    </app-mybutton>
+
+    <h4 *ngIf="isRaining">Hei is raining</h4>
+
+    <H5>{{counter}}</H5>
+
+    <router-outlet></router-outlet>
+
+
