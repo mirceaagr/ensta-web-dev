@@ -1,0 +1,56 @@
+GET http://localhost:3000/clients
+###
+
+GET http://localhost:3000/bills
+###
+
+GET http://localhost:3000/bills/2/items
+###
+
+GET http://localhost:3000/bills/?_expand=client
+###
+
+GET http://localhost:3000/clients/1?_embed=bills
+###
+
+GET http://localhost:3000/products
+###
+
+GET http://localhost:3000/items/1?_expand=product
+###
+
+GET http://localhost:3000/bills/1/items
+###
+
+GET http://localhost:3000/clients/3
+###
+
+DELETE http://localhost:3000/clients/3
+###
+
+POST http://localhost:3000/clients
+Content-Type: application/json
+
+{
+    "name": "Mircea",
+    "surname": "Agrigor",
+    "isCompany": false,
+    "registrationNumber": null,
+    "iban": null,
+    "bic": null,
+    "address": {
+      "street": "Rue de Paris",
+      "streetNo": "2",
+      "postalCode": "91400",
+      "city": "Palaiseau"
+    }
+  }
+###
+
+PATCH http://localhost:3000/clients/3
+Content-Type: application/json
+
+{
+    "surname":"Agrigoroaie"
+}
+
