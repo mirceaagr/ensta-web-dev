@@ -10,6 +10,7 @@ import { IProduct } from './product.model';
 export class ProductsComponent implements OnInit {
   public products:IProduct[]
   public testVar:string;
+  public err:string = "";
   constructor(private rest:RestService) { }
 
   ngOnInit(): void {
@@ -17,7 +18,8 @@ export class ProductsComponent implements OnInit {
     this.rest.getProducts().subscribe(
       (products:IProduct[]) => {
         this.products = products;
-      }
+      },
+      err => {this.err = err}
     )
   }
 
