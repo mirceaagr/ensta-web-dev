@@ -15,14 +15,14 @@ export class RestService {
   constructor(private http:HttpClient) { }
 
   getProducts():Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(`${API_URL}/products`);
+    return this.http.get<IProduct[]>(`${API_URL}products`);
   }
 
   getClients():Observable<any> {
-    return this.http.get<any>(`${API_URL}/clients`);
+    return this.http.get<any>(`${API_URL}clients`);
   }
 
   getSettings():Observable<any> {
-    return this.http.get<any>(`${API_URL}/settings`);
+    return this.http.get<any>(`${API_URL}settings`);
   }
 }
