@@ -11,6 +11,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProgressComponent } from './components/progress/progress.component';
+import { ProductComponent } from './components/products/product/product.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProgressComponent } from './components/progress/progress.component';
     ProductsComponent,
     SettingsComponent,
     DashboardComponent,
-    ProgressComponent
+    ProgressComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
