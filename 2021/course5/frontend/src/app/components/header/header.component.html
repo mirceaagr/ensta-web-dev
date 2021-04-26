@@ -5,6 +5,6 @@
 
   <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
     <a *ngFor="let link of nav"
-      class="me-3 py-2 text-dark text-decoration-none" href="link.link">{{link.label}}</a>
+      class="me-3 py-2 text-dark text-decoration-none" [routerLink]="link.link">{{link.label}}</a>
   </nav>
 </header>

@@ -9,6 +9,7 @@ import { BillsComponent } from './components/bills/bills.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     BillsComponent,
     ClientsComponent,
     ProductsComponent,
-    SettingsComponent
+    SettingsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
