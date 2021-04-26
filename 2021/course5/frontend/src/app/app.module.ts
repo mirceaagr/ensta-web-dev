@@ -10,6 +10,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ClientsComponent,
     ProductsComponent,
     SettingsComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,
