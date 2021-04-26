@@ -14,7 +14,11 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.testVar = this.rest.testVar;
-    this.products = this.rest.products;
+    this.rest.getProducts().subscribe(
+      (products:IProduct[]) => {
+        this.products = products;
+      }
+    )
   }
 
 }
