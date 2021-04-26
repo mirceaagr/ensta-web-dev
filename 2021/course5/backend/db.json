@@ -44,6 +44,21 @@
         "city": "Palaiseau"
       },
       "id": 3
+    },
+    {
+      "name": "Nicholas",
+      "surname": "TestsAlot",
+      "isCompany": false,
+      "registrationNumber": null,
+      "iban": null,
+      "bic": null,
+      "address": {
+        "street": "Rue de Paris",
+        "streetNo": "2",
+        "postalCode": "91400",
+        "city": "Palaiseau"
+      },
+      "id": 4
     }
   ],
   "bills": [

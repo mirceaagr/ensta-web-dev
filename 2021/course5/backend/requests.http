@@ -32,8 +32,8 @@ POST http://localhost:3000/clients
 Content-Type: application/json
 
 {
-    "name": "Mircea",
-    "surname": "Agrigor",
+    "name": "Nicholas",
+    "surname": "Test",
     "isCompany": false,
     "registrationNumber": null,
     "iban": null,
@@ -47,10 +47,10 @@ Content-Type: application/json
   }
 ###
 
-PATCH http://localhost:3000/clients/3
+PATCH http://localhost:3000/clients/4
 Content-Type: application/json
 
 {
-    "surname":"Agrigoroaie"
+    "surname":"TestsAlot"
 }
 
