@@ -14,6 +14,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { Form1Component } from './forms/form1/form1.component';
 import { Form2Component } from './forms/form2/form2.component';
 import { SidebarEventComponent } from './sidebar/sidebar-event/sidebar-event.component';
+import { ConcertComponent } from './sidebar/concert/concert.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SidebarEventComponent } from './sidebar/sidebar-event/sidebar-event.com
     ContactComponent,
     Form1Component,
     Form2Component,
-    SidebarEventComponent
+    SidebarEventComponent,
+    ConcertComponent
   ],
   imports: [
     BrowserModule,

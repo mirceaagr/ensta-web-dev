@@ -8,6 +8,7 @@ import { EventsServiceService } from '../events-service.service';
 })
 export class SidebarComponent implements OnInit {
   public events:string[] = null
+  public concertMan = "blabla"
 
   constructor(private eventsService:EventsServiceService) { }
 

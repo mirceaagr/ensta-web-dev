@@ -3,4 +3,11 @@
   <ul>
     <app-sidebar-event *ngFor="let event of events" [eventName]="event"></app-sidebar-event>
   </ul>
+
+  <h2>Next concerts</h2>
+  <ul>
+    <app-concert concertName="Mircea"></app-concert>
+    <app-concert concertName="Nicholas"></app-concert>
+    <app-concert [concertName]="concertMan"></app-concert>
+  </ul>
 </aside>
