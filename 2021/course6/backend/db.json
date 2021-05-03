@@ -1,0 +1,133 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "John",
+      "surname": "Doe",
+      "isCompany": false,
+      "registrationNumber": null,
+      "iban": "12345656",
+      "bic": "1234",
+      "address": {
+        "street": "Rue de la Pacaterie",
+        "streetNo": "12",
+        "postalCode": "91400",
+        "city": "Orsay"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Joana",
+      "surname": "Does",
+      "isCompany": true,
+      "registrationNumber": "AF12345",
+      "iban": "12345656",
+      "bic": "1234",
+      "address": {
+        "street": "Rue de Paris",
+        "streetNo": "1",
+        "postalCode": "91400",
+        "city": "Palaiseau"
+      }
+    },
+    {
+      "name": "Mircea",
+      "surname": "Agrigoroaie",
+      "isCompany": false,
+      "registrationNumber": null,
+      "iban": null,
+      "bic": null,
+      "address": {
+        "street": "Rue de Paris",
+        "streetNo": "2",
+        "postalCode": "91400",
+        "city": "Palaiseau"
+      },
+      "id": 3
+    },
+    {
+      "name": "Nicholas",
+      "surname": "TestsAlot",
+      "isCompany": false,
+      "registrationNumber": null,
+      "iban": null,
+      "bic": null,
+      "address": {
+        "street": "Rue de Paris",
+        "streetNo": "2",
+        "postalCode": "91400",
+        "city": "Palaiseau"
+      },
+      "id": 4
+    }
+  ],
+  "bills": [
+    {
+      "id": 1,
+      "clientId": 1,
+      "vat": 10,
+      "total": 15,
+      "date":"2021-04-03"
+    },
+    {
+      "id": 2,
+      "clientId": 2,
+      "vat": 10,
+      "total": 15,
+      "date":"2021-04-03"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "T-Shirt",
+      "description": "Some shirt",
+      "price": 100,
+      "picture": "https://picsum.photos/100/100?random=1"
+    },
+    {
+      "id": 2,
+      "name": "Pants",
+      "description": "Some Pants",
+      "price": 200,
+      "picture": "https://picsum.photos/100/100?random=2"
+    },
+    {
+      "id": 3,
+      "name": "Socks",
+      "description": "Some socks",
+      "price": 400,
+      "picture": "https://picsum.photos/100/100?random=3"
+    },
+    {
+      "id": 4,
+      "name": "Hat",
+      "description": "Nice Hat",
+      "price": 50,
+      "picture": "https://picsum.photos/100/100?random=4"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "billId": 2,
+      "productId": 1,
+      "qty": 2
+    },
+    {
+      "id": 2,
+      "billId": 1,
+      "productId": 1,
+      "qty": 1
+    }
+  ],
+  "settings": {
+    "vat": 19,
+    "applicationName": "Ensta Billing",
+    "companyName": "Ensta SA",
+    "companyAddress": "Rue de Marechaux nr 20, Palaiseau",
+    "companyRegistrationNumber": "AZ123345",
+    "companyIban": "RZ12334456677",
+    "companyBic": "12345"
+  }
+}
