@@ -67,14 +67,14 @@
       "clientId": 1,
       "vat": 10,
       "total": 15,
-      "date":"2021-04-03"
+      "date": "2021-04-03"
     },
     {
       "id": 2,
       "clientId": 2,
       "vat": 10,
       "total": 15,
-      "date":"2021-04-03"
+      "date": "2021-04-03"
     }
   ],
   "products": [
@@ -105,6 +105,62 @@
       "description": "Nice Hat",
       "price": 50,
       "picture": "https://picsum.photos/100/100?random=4"
+    },
+    {
+      "name": "test",
+      "description": "tessssssssssssss",
+      "price": 10,
+      "picture": "https://picsum.photos/100/100?random=1",
+      "id": 5
+    },
+    {
+      "name": "fdsfsdf",
+      "description": "sdfdsfsdfsdfsd",
+      "price": 12,
+      "picture": "https://picsum.photos/200/300",
+      "id": 6
+    },
+    {
+      "name": "fdsfsdf",
+      "description": "sdfdsfsdfsdfsd",
+      "price": 12,
+      "picture": "https://picsum.photos/200/300",
+      "id": 7
+    },
+    {
+      "name": "fdsfsdf",
+      "description": "sdfdsfsdfsdfsd",
+      "price": 12,
+      "picture": "https://picsum.photos/200/300",
+      "id": 8
+    },
+    {
+      "name": "fdsfsdf",
+      "description": "sdfdsfsdfsdfsd",
+      "price": 12,
+      "picture": "https://picsum.photos/200/300",
+      "id": 9
+    },
+    {
+      "name": "fdsfsdf",
+      "description": "sdfdsfsdfsdfsd",
+      "price": 12,
+      "picture": "https://picsum.photos/200/300",
+      "id": 10
+    },
+    {
+      "name": "fdsfsdf",
+      "description": "sdfdsfsdfsdfsd",
+      "price": 12,
+      "picture": "https://picsum.photos/200/300",
+      "id": 11
+    },
+    {
+      "name": "dfdsfsd",
+      "description": "sdfsdfsdfsdfsd",
+      "price": 34,
+      "picture": "https://picsum.photos/100/100?random=1",
+      "id": 12
     }
   ],
   "items": [

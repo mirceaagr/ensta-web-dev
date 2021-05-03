@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { IProduct } from '../product.model';
 
 @Component({
@@ -8,6 +8,8 @@ import { IProduct } from '../product.model';
 })
 export class ProductFormComponent implements OnInit {
   public product:IProduct
+  @Output() onProductSubmit:EventEmitter<IProduct> =  new EventEmitter<IProduct>();
+
   constructor() {
     this.product = {
       description:"",
@@ -24,7 +26,7 @@ export class ProductFormComponent implements OnInit {
   }
 
   onSubmit(formValue){
-    console.log(formValue);
+    this.onProductSubmit.emit(formValue);
   }
 
   ngOnInit(): void {
