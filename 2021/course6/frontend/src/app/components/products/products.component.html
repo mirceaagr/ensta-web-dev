@@ -2,7 +2,10 @@
 
 <div class="row" *ngIf="products; else loader">
   <div class="col-md-3" *ngFor="let product of products">
-      <app-product [product]="product"></app-product>
+      <app-product
+      [product]="product"
+      (onProductDelete)="deleteProduct($event)"
+      ></app-product>
   </div>
 </div>
 

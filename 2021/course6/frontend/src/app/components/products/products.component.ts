@@ -23,4 +23,8 @@ export class ProductsComponent implements OnInit {
     )
   }
 
+  deleteProduct(productId) {
+    // we call the service and delete the products
+  }
+
 }

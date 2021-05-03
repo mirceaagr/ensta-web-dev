@@ -100,11 +100,11 @@
       "picture": "https://picsum.photos/100/100?random=3"
     },
     {
-      "id": 4,
-      "name": "Hat",
-      "description": "Nice Hat",
+      "name": "Nice Hat",
+      "description": "Nice Hataasdasdas",
       "price": 50,
-      "picture": "https://picsum.photos/100/100?random=4"
+      "picture": "https://picsum.photos/100/100?random=4",
+      "id": 4
     },
     {
       "name": "test",
