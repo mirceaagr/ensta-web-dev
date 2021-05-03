@@ -1,3 +1,5 @@
+<a routerLink="/products/add" class="btn btn-primary my-4">Add Product</a>
+
 <div class="row" *ngIf="products; else loader">
   <div class="col-md-3" *ngFor="let product of products">
       <app-product [product]="product"></app-product>

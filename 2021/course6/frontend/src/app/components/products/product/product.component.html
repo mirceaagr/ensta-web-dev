@@ -3,6 +3,7 @@
   <div class="card-body">
     <h5 class="card-title">{{product.name}}</h5>
     <p class="card-text">{{product.description}}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a routerLink="/products/edit/{{product.id}}" class="btn btn-primary">Edit Product</a>
+    <button type="button" class="btn btn-danger">&times;</button>
   </div>
 </div>

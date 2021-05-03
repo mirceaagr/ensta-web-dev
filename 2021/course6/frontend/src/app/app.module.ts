@@ -13,6 +13,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { ProductComponent } from './components/products/product/product.component';
 import { HttpClientModule} from '@angular/common/http';
+import { ProductEditComponent } from './components/products/product-edit/product-edit.component';
+import { ProductAddComponent } from './components/products/product-add/product-add.component';
+import { ProductFormComponent } from './components/products/product-form/product-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +29,16 @@ import { HttpClientModule} from '@angular/common/http';
     SettingsComponent,
     DashboardComponent,
     ProgressComponent,
-    ProductComponent
+    ProductComponent,
+    ProductEditComponent,
+    ProductAddComponent,
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
