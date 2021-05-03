@@ -1,6 +1,5 @@
 <div class="row">
-  <h1>Add new product</h1>
-
+  <h1>{{title}}</h1>
   <form #form="ngForm" (change)="outputForm(form)" (ngSubmit)="onSubmit(form.value)">
     <div class="alert alert-danger" *ngIf="form.invalid && form.touched">
       Form invalid
@@ -62,7 +61,7 @@
     </div>
 
     <div class="form-group col-md-4 my-4">
-      <input type="submit" value="Add Product" [disabled]="form.invalid" class="btn btn-primary">
+      <input type="submit" [value]="title" [disabled]="form.invalid" class="btn btn-primary">
     </div>
 
 

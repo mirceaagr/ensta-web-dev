@@ -86,11 +86,11 @@
       "picture": "https://picsum.photos/100/100?random=1"
     },
     {
-      "id": 2,
-      "name": "Pants",
+      "name": "Long Pants",
       "description": "Some Pants",
       "price": 200,
-      "picture": "https://picsum.photos/100/100?random=2"
+      "picture": "https://picsum.photos/100/100?random=2",
+      "id": 2
     },
     {
       "id": 3,

@@ -1,1 +1,13 @@
-<app-product-form></app-product-form>
+
+<app-product-form
+  *ngIf="!submitted; else success"
+  title="Edit Product"
+  [product] = "product"
+  (onProductSubmit) = "editProduct($event)"
+></app-product-form>
+
+<ng-template #success>
+  <div class="alert alert success">
+    Product has been updated
+  </div>
+</ng-template>

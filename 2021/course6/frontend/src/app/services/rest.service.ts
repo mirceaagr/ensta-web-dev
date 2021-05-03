@@ -18,8 +18,16 @@ export class RestService {
     return this.http.get<IProduct[]>(`${API_URL}products`);
   }
 
+  getProduct(id:number):Observable<IProduct> {
+    return this.http.get<IProduct>(`${API_URL}products/${id}`);
+  }
+
   addProduct(product:IProduct):Observable<IProduct>{
     return this.http.post<IProduct>(`${API_URL}products`, product);
+  }
+
+  editProduct(product:IProduct):Observable<IProduct>{
+    return this.http.put<IProduct>(`${API_URL}products/${product.id}`, product);
   }
 
   getClients():Observable<any> {
