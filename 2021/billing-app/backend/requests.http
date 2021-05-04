@@ -1,0 +1,64 @@
+GET http://localhost:3000/clients
+###
+
+GET http://localhost:3000/bills
+###
+
+GET http://localhost:3000/bills/2/items
+###
+
+GET http://localhost:3000/bills/?_expand=client
+###
+
+GET http://localhost:3000/clients/1?_embed=bills
+###
+
+GET http://localhost:3000/products
+###
+
+
+GET http://localhost:3000/products/1
+###
+
+GET http://localhost:3000/items/1?_expand=product
+###
+
+GET http://localhost:3000/bills/3/items
+###
+
+
+GET http://localhost:3000/bills/3?_embed=items
+###
+
+GET http://localhost:3000/clients/3
+###
+
+DELETE http://localhost:3000/clients/3
+###
+
+POST http://localhost:3000/clients
+Content-Type: application/json
+
+{
+    "name": "Nicholas",
+    "surname": "Test",
+    "isCompany": false,
+    "registrationNumber": null,
+    "iban": null,
+    "bic": null,
+    "address": {
+      "street": "Rue de Paris",
+      "streetNo": "2",
+      "postalCode": "91400",
+      "city": "Palaiseau"
+    }
+  }
+###
+
+PATCH http://localhost:3000/clients/4
+Content-Type: application/json
+
+{
+    "surname":"TestsAlot"
+}
+

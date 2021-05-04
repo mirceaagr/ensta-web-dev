@@ -1,0 +1,29 @@
+<div class="row" [formGroup] = "fg">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="product-{{index}}"> Product ({{index + 1}})</label>
+            <select id="product-{{index}}" class="form-control" formControlName="productId">
+                <option value="">-- Select Product --</option>
+                <option *ngFor="let product of products" [value]="product.id">{{product.name}}</option>
+            </select>
+            <div class="alert alert-danger" *ngIf="fg.get('productId').invalid && (fg.get('productId').touched || fg.get('productId').dirty)">
+                Please select a product
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="qty-{{index}}"> Qty.</label>
+            <input type="number" class="form-control" formControlName="qty">
+        </div>
+        <div class="alert alert-danger" *ngIf="fg.get('qty').invalid && (fg.get('qty').touched || fg.get('qty').dirty)">
+            Specify quantity
+        </div>
+
+    </div>
+    <div class="col-md-1 text-right">
+        <button type="button" (click)="onDelete()" class="btn btn-danger mt-4">&times;</button>
+    </div>
+</div>
+
+

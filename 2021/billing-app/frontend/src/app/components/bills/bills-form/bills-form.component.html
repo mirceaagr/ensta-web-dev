@@ -1,0 +1,77 @@
+
+<div class="row">
+    <div class="container" *ngIf="!loading; else spinner">
+        <div class="row alert alert-danger" *ngIf="error">
+            {{error}}
+        </div>
+        <form [formGroup]="billForm" (ngSubmit)="onBillSubmit()" *ngIf="!submitted; else success">
+
+            <div class="row">
+                <div class="form group col-md-4">
+                    <label for="date"> Bill Date:</label>
+                    <input type="date" name="date" formControlName = "date" class="form-control">
+                    <div class="alert alert-danger" *ngIf="billForm.get('date').invalid && (billForm.get('date').touched || billForm.get('date').dirty)">
+                        Date is required
+                    </div>
+                </div>
+               
+                <div class="form-group col-md-4">
+                    <label for="clientId"> Select Client: </label>
+                    <select name="clientId" id="clientId" class="form-control" formControlName = "clientId">
+                        <option value="">-- Select Client --</option>
+                        <option *ngFor="let client of clients" [value]="client.id"> {{ client.name }} {{ client.surname }}</option>
+                    </select>
+                    <div class="alert alert-danger" *ngIf="billForm.get('clientId').invalid && (billForm.get('clientId').touched || billForm.get('clientId').dirty)">
+                        Please select a client
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <app-bill-form-item
+                 *ngFor="let item of billForm.controls.items['controls']; let i = index" 
+                 [index]="i"
+                 [fg]="item"
+                 [products]="products"
+                 (onItemDelete)="deleteItem($event)"
+                 
+                 ></app-bill-form-item>
+            </div>
+
+            
+            <div class="row mt-4">
+                <div class="col-md-11">
+                    <span class="badge bg-secondary">Total:{{total}}</span>
+                    <span class="badge bg-secondary">VAT:{{vat}}</span>
+                    <span class="badge bg-primary">Grand Total: {{total + vat}}</span>
+                </div>
+                <div class="col-md-1">
+                    <button type="button" (click)="addItem()" class="btn btn-success">+</button>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4 offset-md-11 my-3">
+                    <button type="submit" class="btn btn-primary">{{ isUpdate ? 'Update':'Create' }} bill</button>
+                </div>
+            </div>
+
+           
+
+        </form>
+
+        <!-- Here we are gonna add line by line new items -->
+    </div>
+</div>
+
+<ng-template #spinner>
+    <app-spinner></app-spinner>
+</ng-template>
+
+<ng-template #success>
+    <div class="alert alert-success" >
+        Bill was {{ isUpdate ? 'updated' : 'created' }}
+    </div>
+</ng-template>
