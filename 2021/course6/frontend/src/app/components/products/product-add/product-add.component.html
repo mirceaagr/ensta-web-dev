@@ -1,0 +1,10 @@
+<app-product-form
+  (onProductSubmit)="addProduct($event)"
+  *ngIf="!submitted; else success"
+></app-product-form>
+
+<ng-template #success>
+  <div class="alert alert-success">
+    Product has been added
+  </div>
+</ng-template>

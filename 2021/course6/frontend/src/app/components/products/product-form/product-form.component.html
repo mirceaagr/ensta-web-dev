@@ -1,0 +1,73 @@
+<div class="row">
+  <h1>{{title}}</h1>
+  <form #form="ngForm" (change)="outputForm(form)" (ngSubmit)="onSubmit(form.value)">
+    <div class="alert alert-danger" *ngIf="form.invalid && form.touched">
+      Form invalid
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="productName">Product Name</label>
+      <input
+      [(ngModel)]="product.name"
+      #name="ngModel"
+      type="text"
+      name="name"
+      class="form-control"
+      id="productName"
+      required
+      >
+      <div class="alert alert-danger" *ngIf="name.invalid && (name.touched || name.dirty)">Product name is required</div>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="productDescription">Product Description</label>
+      <textarea
+      [(ngModel)]="product.description"
+      class="form-control"
+      name="description"
+      id="productDescription"
+      #desc="ngModel"
+      cols="30"
+      rows="10"
+      required
+      minlength="10"
+      ></textarea>
+      <div *ngIf="desc.invalid && (desc.touched || desc.dirty)">
+        <div class="alert alert-danger" *ngIf="desc?.errors?.required">Product Description is required</div>
+        <div class="alert alert-danger"
+        *ngIf="desc?.errors?.minlength">Minimum message length is {{desc?.errors?.minlength.requiredLength}}. You have typed {{desc?.errors?.minlength.actualLength}}</div>
+      </div>
+
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="productPrice">Product Price</label>
+      <input
+      [(ngModel)]="product.price"
+      #price = "ngModel"
+      type="number" name="price" class="form-control" id="productPrice" required>
+    </div>
+    <div class="alert alert-danger" *ngIf="price.invalid && (price.touched || price.dirty)">Product Price is required</div>
+
+
+    <div class="form-group col-md-4">
+      <label for="productPicture">Product Picture</label>
+      <input
+      [(ngModel)]="product.picture"
+      #picture="ngModel"
+      type="text" name="picture" class="form-control" id="productPicture" required>
+      <div class="alert alert-danger" *ngIf="picture.invalid && (picture.dirty || picture.touched)">Product Picture is required</div>
+
+    </div>
+
+    <div class="form-group col-md-4 my-4">
+      <input type="submit" [value]="title" [disabled]="form.invalid" class="btn btn-primary">
+    </div>
+
+
+
+
+
+  </form>
+</div>
+
