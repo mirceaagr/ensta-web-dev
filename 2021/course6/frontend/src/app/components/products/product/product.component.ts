@@ -8,7 +8,7 @@ import { IProduct } from '../product.model';
 })
 export class ProductComponent implements OnInit {
   @Input() product:IProduct
-  @Output() onProductDelete:EventEmitter<number> = new EventEmitter<number>();
+  @Output() whenMirceaDeletesStuff:EventEmitter<number> = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit(): void {
@@ -16,7 +16,7 @@ export class ProductComponent implements OnInit {
 
   deleteProduct() {
     console.log("bla");
-    this.onProductDelete.emit(this.product.id);
+    this.whenMirceaDeletesStuff.emit(this.product.id);
   }
 
 }

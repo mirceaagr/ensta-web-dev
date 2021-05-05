@@ -93,34 +93,6 @@
       "id": 2
     },
     {
-      "id": 3,
-      "name": "Socks",
-      "description": "Some socks",
-      "price": 400,
-      "picture": "https://picsum.photos/100/100?random=3"
-    },
-    {
-      "name": "Nice Hat",
-      "description": "Nice Hataasdasdas",
-      "price": 50,
-      "picture": "https://picsum.photos/100/100?random=4",
-      "id": 4
-    },
-    {
-      "name": "test",
-      "description": "tessssssssssssss",
-      "price": 10,
-      "picture": "https://picsum.photos/100/100?random=1",
-      "id": 5
-    },
-    {
-      "name": "fdsfsdf",
-      "description": "sdfdsfsdfsdfsd",
-      "price": 12,
-      "picture": "https://picsum.photos/200/300",
-      "id": 6
-    },
-    {
       "name": "fdsfsdf",
       "description": "sdfdsfsdfsdfsd",
       "price": 12,

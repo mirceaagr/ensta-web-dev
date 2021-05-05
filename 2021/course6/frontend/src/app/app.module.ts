@@ -16,7 +16,10 @@ import { HttpClientModule} from '@angular/common/http';
 import { ProductEditComponent } from './components/products/product-edit/product-edit.component';
 import { ProductAddComponent } from './components/products/product-add/product-add.component';
 import { ProductFormComponent } from './components/products/product-form/product-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ClientAddComponent } from './components/clients/client-add/client-add.component';
+import { ClientEditComponent } from './components/clients/client-edit/client-edit.component';
+import { ClientFormComponent } from './components/clients/client-form/client-form.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +36,16 @@ import { FormsModule } from '@angular/forms';
     ProductEditComponent,
     ProductAddComponent,
     ProductFormComponent,
+    ClientAddComponent,
+    ClientEditComponent,
+    ClientFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

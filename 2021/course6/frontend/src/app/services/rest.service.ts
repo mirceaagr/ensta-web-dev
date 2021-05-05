@@ -22,6 +22,10 @@ export class RestService {
     return this.http.get<IProduct>(`${API_URL}products/${id}`);
   }
 
+  deleteProduct(id:number){
+    return this.http.delete(`${API_URL}products/${id}`)
+  }
+
   addProduct(product:IProduct):Observable<IProduct>{
     return this.http.post<IProduct>(`${API_URL}products`, product);
   }

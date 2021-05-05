@@ -14,6 +14,10 @@ export class ProductsComponent implements OnInit {
   constructor(private rest:RestService) { }
 
   ngOnInit(): void {
+    this.getProducts();
+  }
+
+  getProducts() {
     this.testVar = this.rest.testVar;
     this.rest.getProducts().subscribe(
       (products:IProduct[]) => {
@@ -23,7 +27,11 @@ export class ProductsComponent implements OnInit {
     )
   }
 
-  deleteProduct(productId) {
+
+
+  deleteInsideParentComponent(productId) {
+    this.rest.deleteProduct(productId)
+      .subscribe(() => this.getProducts())
     // we call the service and delete the products
   }
 

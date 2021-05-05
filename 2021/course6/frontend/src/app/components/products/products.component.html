@@ -4,7 +4,7 @@
   <div class="col-md-3" *ngFor="let product of products">
       <app-product
       [product]="product"
-      (onProductDelete)="deleteProduct($event)"
+      (whenMirceaDeletesStuff)="deleteInsideParentComponent($event)"
       ></app-product>
   </div>
 </div>
