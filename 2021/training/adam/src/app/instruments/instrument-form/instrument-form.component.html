@@ -1,0 +1,58 @@
+
+<form #myForm="ngForm" (change)="debugForm(myForm)" (ngSubmit)="formSubmit(myForm.value); myForm.reset()">
+  <div class="form-group">
+
+    <label for="instName">Instrument Name:</label>
+    <input [(ngModel)]="instrument.name"
+    #name="ngModel"
+     type="text"
+     name="name"
+     id="instName"
+     class="form-control"
+     required
+     maxLength=10
+     >
+  </div>
+  <p class="text-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+    Instrument name required
+  </p>
+
+  <div class="form-group">
+    <label for="choordsNo">Number of choords:</label>
+    <input [(ngModel)]="instrument.choordsNo"
+     type="number" name="choordsNo" id="choordsNo"
+     #choords = "ngModel"
+     class="form-control"
+     required
+     max=6
+     min=1
+     >
+  </div>
+  <p class="text-danger" *ngIf="choords.invalid && (choords.dirty || choords.touched)" >
+    Choords required
+  </p>
+
+  <div class="form-group">
+    <label for="familly">Instrument Name:</label>
+    <select [(ngModel)]="instrument.familly" name="familly" id="familly"
+    #familly="ngModel"
+    class="form-control"
+    required>
+      <option value="">-- Select Familly --</option>
+      <option value="brass">brass</option>
+      <option value="percution">percution</option>
+      <option value="choords">choords</option>
+    </select>
+  </div>
+  <p class="text-danger" *ngIf="familly.invalid && (familly.dirty || familly.touched)" >
+    Familly of instruments required
+  </p>
+
+  <button class="btn btn-success" type="submit" [disabled]="myForm.invalid">
+    {{operation == "add" ? "Add" : "Edit"}} instrument
+  </button>
+</form>
+
+{{instrument | json}}
+
+required | minlength | maxlength | min | max | pattern | email

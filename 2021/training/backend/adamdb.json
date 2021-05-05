@@ -1,0 +1,28 @@
+{
+  "instruments": [
+    {
+      "id": 1,
+      "name": "violin",
+      "choordsNo": "4",
+      "familly": "choords"
+    },
+    {
+      "name": "trombone",
+      "choordsNo": 4,
+      "familly": "brass",
+      "id": 2
+    },
+    {
+      "name": "Adam",
+      "choordsNo": 4,
+      "familly": "brass",
+      "id": 3
+    },
+    {
+      "name": "Adam 3",
+      "choordsNo": 2,
+      "familly": "percution",
+      "id": 4
+    }
+  ]
+}

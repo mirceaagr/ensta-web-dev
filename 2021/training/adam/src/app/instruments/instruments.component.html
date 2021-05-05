@@ -1,0 +1,26 @@
+
+<h1>Instruments</h1>
+
+<a routerLink="/instruments/add" class="btn btn-primary">Add Instrument</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Instrument</th>
+      <th>Choords</th>
+      <th>Familly</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let instrument of instruments">
+      <td>{{instrument.id}}</td>
+      <td>{{instrument.name}}</td>
+      <td>{{instrument.choordsNo}}</td>
+      <td>{{instrument.familly}}</td>
+      <th><a routerLink="/instruments/edit/{{instrument.id}}" class="btn btn-primary">Edit</a></th>
+    </tr>
+  </tbody>
+
+
+</table>

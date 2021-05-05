@@ -1,0 +1,9 @@
+<app-inst-form (onFormSubmit)="addInstrument($event)"
+  *ngIf="!submitted; else success"
+></app-inst-form>
+
+<ng-template #success>
+  <div class="alert alert-success">
+    Instrument has been added
+  </div>
+</ng-template>

@@ -64,17 +64,24 @@
   "bills": [
     {
       "id": 1,
-      "clientId": "2",
-      "date": "2021-05-04",
-      "total": 1809,
-      "vat": 343.71
+      "clientId": "3",
+      "date": "2021-05-05",
+      "total": 1600,
+      "vat": 304
     },
     {
       "id": 2,
-      "clientId": "2",
-      "date": "2021-05-04",
-      "total": 1612,
-      "vat": 306.28
+      "clientId": "3",
+      "date": "2021-05-05",
+      "total": 2400,
+      "vat": 456
+    },
+    {
+      "id": 3,
+      "clientId": "3",
+      "date": "2021-05-05",
+      "total": 1200,
+      "vat": 228
     }
   ],
   "products": [
@@ -105,32 +112,39 @@
       "description": "Nice Hat",
       "price": 50,
       "picture": "https://picsum.photos/100/100?random=4"
+    },
+    {
+      "name": "New product",
+      "description": "test product with minimum of 15 chars",
+      "price": 12,
+      "picture": "https://picsum.photos/100/100?random=2",
+      "id": 5
     }
   ],
   "items": [
     {
-      "id": 1,
-      "billId": 1,
-      "productId": "2",
-      "qty": 3
-    },
-    {
       "id": 2,
       "billId": 1,
       "productId": "3",
-      "qty": 3
+      "qty": 4
     },
     {
       "id": 3,
       "billId": 2,
-      "productId": "2",
+      "productId": "1",
       "qty": 4
     },
     {
       "id": 4,
       "billId": 2,
       "productId": "3",
-      "qty": 2
+      "qty": 5
+    },
+    {
+      "id": 5,
+      "billId": 3,
+      "productId": "3",
+      "qty": 3
     }
   ],
   "settings": {
