@@ -1,0 +1,16 @@
+<div class="progress">
+  <div
+    [ngClass]="{
+      'progress-bar':true,
+      'bg-warning':barType == 'warning',
+      'bg-info':barType == 'info',
+      'bg-danger':barType == 'danger',
+      'bg-success':barType == 'success'
+    }"
+    role="progressbar"
+    [ngStyle]="{'width': percent + '%'}"
+    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    {{percent}}
+  </div>
+</div>
+<hr>

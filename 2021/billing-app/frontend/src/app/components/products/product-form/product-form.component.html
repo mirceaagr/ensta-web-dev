@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4 m-4" *ngIf="!loading; else spinner">
+        <h1>{{title}}</h1>
+        <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" (change)="testForm(form)" *ngIf="!submited; else thankYou">
+            <div class="form-group">
+                <label for="productName"> Product Name</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    [(ngModel)]="product.name" 
+                    #name = "ngModel"
+                    name="name" 
+                    id="productName" 
+                    required>
+            </div>
+            <div class="alert alert-danger"
+                *ngIf="(name.dirty || name.touched) && name.invalid"
+            >
+                Product name is required
+            </div>
+
+            <div class="form-group">
+                <label for="productDescription"> Product Description</label>
+                <textarea  
+                    class="form-control" 
+                    id="productDescription" 
+                    name="description" 
+                    cols="30" 
+                    rows="10" 
+                    [(ngModel)] = "product.description" 
+                    #desc = "ngModel"
+                    minlength="15"
+                    required
+                    >
+                </textarea>
+                <div *ngIf="desc.touched || desc.dirty">
+                    <div class="alert alert-danger" *ngIf="desc?.errors?.required">
+                        Description is required
+                    </div>
+                    <div class="alert alert-danger"  *ngIf="desc?.errors?.minlength">
+                        Minimum desc should be {{desc?.errors?.minlength.requiredLength}} chars. You've inputed {{desc?.errors?.minlength.actualLength}} chars
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="form-group">
+                <label for="productPrice"> Price</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    [(ngModel)]="product.price" 
+                    name="price" 
+                    #price = "ngModel"
+                    id="productPrice" 
+                    required>
+                    <div class="alert alert-danger"  *ngIf="(price.dirty || price.touched) && price.invalid">
+                        Price is required
+                    </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="productPicture"> Picture</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    [(ngModel)]="product.picture" 
+                    #picture="ngModel"
+                    id="productPicture" 
+                    name="picture" 
+                    required
+                    maxlength="50">
+                    <div class="alert alert-danger" *ngIf="(picture.dirty || picture.touched) && picture.invalid">
+                        Picture is required
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary mt-3" [disabled] = "form.invalid"> {{submitBtnLabel}} </button>
+            </div>
+        </form>
+
+        <ng-template #thankYou>
+            <div class="alert alert-success">
+                {{successMessage}}
+            </div>
+
+        </ng-template>
+
+        <div class="alert alert-danger" *ngIf="errorMessage">
+            {{errorMessage}}
+        </div>
+    </div>
+
+    <ng-template #spinner>
+        <app-spinner></app-spinner>
+    </ng-template>
+</div>

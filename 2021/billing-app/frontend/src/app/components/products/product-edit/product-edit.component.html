@@ -1,0 +1,10 @@
+<app-product-form
+    [product] = "product"
+    title = "Edit Product"
+    successMessage = "Product has been updated"
+    [loading] = "loading"
+    [submited] = "submitted"
+    (onFormSubmit) = "updateProduct($event)"
+    submitBtnLabel = "Update product"
+
+></app-product-form>
